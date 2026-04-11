@@ -1,0 +1,50 @@
+params ["_Basebox", "_boxtype"];
+if (isNil "_boxtype") then {_boxtype = 0;};
+_boxspawn = [[_Basebox, "TOP"], "ACE_medicalSupplyCrate_advanced", 1, [-1,0,0], (0),{0},false] call BIS_fnc_spawnObjects;
+_box = _boxspawn select 0;
+clearItemCargoGlobal _box;
+clearMagazineCargoGlobal _box;
+clearBackpackCargoGlobal _box;
+clearWeaponCargoGlobal _box;
+
+_box addItemCargoGlobal ["ACE_elasticBandage", 80];
+_box addItemCargoGlobal ["ACE_packingBandage", 80];
+_box addItemCargoGlobal ["ACE_quikclot", 20];
+_box addItemCargoGlobal ["ACE_tourniquet", 20];
+_box addItemCargoGlobal ["ACE_splint", 10];
+_box addItemCargoGlobal ["kat_Pulseoximeter", 6];
+_box addItemCargoGlobal ["kat_larynx", 30]; //King LT
+_box addItemCargoGlobal ["kat_chestseal", 20];
+_box addItemCargoGlobal ["kat_IV_16", 30];
+_box addItemCargoGlobal ["kat_IO_fast", 30];
+_box addItemCargoGlobal ["ACE_bloodIV", 10];
+_box addItemCargoGlobal ["ACE_bloodIV_250", 10];
+_box addItemCargoGlobal ["ACE_bloodIV_500", 30];
+_box addItemCargoGlobal ["kat_aatKit", 2];
+_box addItemCargoGlobal ["kat_X_AED", 1];
+_box addItemCargoGlobal ["kat_oxygenTank_300", 1];
+_box addItemCargoGlobal ["kat_painkiller", 5];
+_box addItemCargoGlobal ["ACE_epinephrine", 20];
+_box addItemCargoGlobal ["kat_EACA", 20];
+_box addItemCargoGlobal ["kat_ketamine", 10];
+_box addItemCargoGlobal ["kat_amiodarone", 10];
+_box addItemCargoGlobal ["kat_Atropine", 30];
+_box addItemCargoGlobal ["kat_naloxone", 20];
+_box addItemCargoGlobal ["kat_Norepinephrine", 20];
+_box addItemCargoGlobal ["kat_Nitroglycerin", 20];
+_box addItemCargoGlobal ["kat_lidocaine", 20];
+_box addItemCargoGlobal ["kat_TXA", 20];
+_box addItemCargoGlobal ["kat_Carbonate", 4];
+_box addItemCargoGlobal ["kat_fentanyl", 20];
+_box addItemCargoGlobal ["vtx_stretcher_item", 1];
+_box addItemCargoGlobal ["kat_helistretcher", 1];
+sleep 1;
+_box enableSimulation true;
+if (_boxtype == 1) then {
+	[_box, _Basebox, true] call ace_cargo_fnc_loadItem;
+} else {
+	_Wheel = "UGV_02_Wheel_F" createVehicle position player;
+	_Wheelpos = getPos _Wheel;
+	deleteVehicle _Wheel;
+	_box setPos _Wheelpos;
+};

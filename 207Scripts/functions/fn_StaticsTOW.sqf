@@ -1,0 +1,28 @@
+params ["_mainbox"];
+_mainbox enableSimulation false;
+[parseText "<t align='center' shadow='2' size='4'><t color='#2e2790'>Unpacking sandbags</t></t><br/>", [0,0.7,1,0.5], nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+sleep 1;
+_sandbagL = [[_mainbox, "GROUND"], "Land_BagFence_Round_F", 1, [1.5,0,0], (270),{0},true] call BIS_fnc_spawnObjects;
+sleep 1;
+_sandbagR = [[_mainbox, "GROUND"], "Land_BagFence_Round_F", 1, [-1.5,0,0], (90),{0},true] call BIS_fnc_spawnObjects;
+sleep 1;
+[parseText "<t align='center' shadow='2' size='4'><t color='#2e2790'>Unpacking M41A4 TOW</t></t><br/>", [0,0.7,1,0.5], nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+_Mortar = [[_mainbox, "GROUND"], "RHS_TOW_TriPod_USMC_WD", 1, [0,0,0], 0,{0},false] call BIS_fnc_spawnObjects;
+sleep 2;
+[parseText "<t align='center' shadow='2' size='4'><t color='#2e2790'>Unpacking M41A4 TOW Ammo</t></t><br/>", [0,0.7,1,0.5], nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
+_MortarAmmos = [[_mainbox, "GROUND"], "ACE_Box_82mm_Mo_HE", 1, [1,-1.75,0], 0,{0},true] call BIS_fnc_spawnObjects;
+deleteVehicle _mainbox;
+sleep 2;
+_MortarAmmo = _MortarAmmos select 0;
+_Mortar select 0 enableSimulation true;
+clearItemCargoGlobal _MortarAmmo;
+clearMagazineCargoGlobal _MortarAmmo;
+clearBackpackCargoGlobal _MortarAmmo;
+clearWeaponCargoGlobal _MortarAmmo;
+_MortarAmmo addItemCargoGlobal ["ace_compat_rhs_usf3_mag_TOW", 8];
+sleep 2;
+_delammo = _Mortar select 0 nearSupplies 5;
+{
+if (typeOf _x == "ace_csw_ammo_holder") then {deleteVehicle _x;};
+} forEach _delammo;
+[parseText "<t align='center' shadow='2' size='4'><t color='#2e2790'>M41A4 TOW has been unpacked</t></t><br/>", [0,0.7,1,0.5], nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;

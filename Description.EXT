@@ -1,0 +1,22 @@
+respawn=3;
+respawnDelay=5;
+respawnOnStart=-1;
+disabledAI = 1;
+
+#include "CHVD\dialog.hpp"
+#include "207Scripts\Vehiclespawner\defines.hpp"
+#include "207Scripts\Vehiclespawner\Control.hpp"
+class CfgFunctions
+{
+    #include "CHVD\CfgFunctions.hpp"
+	#include "207Scripts\Functions.h"
+};
+
+disableChannels[] = {
+{0, false, true}, //--- Global Chat
+{1, false, true}, //--- Side Chat
+{2, true, true}, //--- Command Chat
+{3, false, true}, //--- Group Chat
+{4, true, true}, //--- Vehicle Chat
+{5, true, true}, //--- Direct Chat
+};

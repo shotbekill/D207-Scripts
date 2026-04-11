@@ -1,0 +1,1 @@
+_fueltank = "FlexibleTank_01_forest_F" createVehicle position player;

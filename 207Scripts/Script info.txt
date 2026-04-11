@@ -1,0 +1,169 @@
+--Script update info--
+
+--9-4-26 -Shot
+Updated Zeus's
+Other stuff updated and fixed
+
+--2-4-26 -Shot
+Fixed Error's within UAV Naming Code/Remade 70% of it
+Opdem Update 5 Fixed some stuff that shouldn't have been left in the code from testing
+	-added 4x Drone box type's
+Updated Vehicle Spawner
+	-Added Drone's to the Spawner
+	-Drone's get Player side when spawning and join's that side
+	-made some QOL stuff to the GUI's of the Spawner
+	-Added Vehicles to Platoon Spawner
+Added a Arsenal to the Logistical Box's
+
+
+--Hotfix 21-3-26 -Shot
+Fixed error with Charlie's Opdem
+
+--Scripts updated 16-3-26 -Shot
+Updated the script Checker
+Opdem Update 4
+	-Opdem Charlie updated
+Added a way to add Vehicle's to the vehicle spawner with Zeus
+
+--Scripts updated 8-3-26 -Shot
+Opdem Update 3
+	-Opdem Charlie updated
+	-Opdem PHQ updated
+Added new Config file for players moving most of the Init to it.
+Fix for Logistical pack and unpack not working 100%.
+fixed J5 Spectator.
+Added a way to check scripts (This is for J4).
+
+--Scripts updated 2-3-26 -Shot
+added Fn NameUAV to name UAVs
+Opdem Update 2
+	-Opdem Alpha updated
+	-Opdem Bravo updated
+	-Opdem Charlie updated
+	-Opdem Reaper updated
+New Logistical Script layout
+Added a way to pack and unpack the Logistical Box's
+
+--Scripts updated 21-1-26 -Shot
+Opdem Update 1
+	-fn_Basefull updated to spawn all Opdems then wait
+	-Opdem Alpha updated to new spawning way
+	-Opdem Bravo updated to new spawning way
+	-Opdem Charlie updated to new spawning way
+	-Opdem Reaper updated to new spawning way
+	-Opdem PHQ updated to new spawning way
+	-Opdem Ghost updated to new spawning way
+	-removed old Base1/Base2/Base3 box's
+Vehicle Spawner Update
+	-Config moved from Land/Air to Platoon/Foxtrot/Hawkeye
+	-update GUI with new Config
+	-Spawner now has x2 GUI's
+	-GUI layout updated
+	-Zeus's can now stop the spawning of Platoon/Foxtrot/Hawkeye vehicle's
+(Firelady has do some thing to Bravo Opdem)
+
+--Scripts updated 26-11-25 -Shot
+Fixed respawn mover
+	-was doing a remoteExec when it shouldn't
+new Vehicle Spawner
+	-Added Vehicle Spawner to the LogisticalResupplyScript
+New Reaper box added
+	-Reaper Box 3 added
+	-Has 500 Banana's (this is temp)
+
+--Scripts updated 9-9-25 -Shot
+Updated EndEx to stop OCAP
+Updated All Opdems Box's to the new modded Box's
+updated EndEx fnc to have grid and map marker
+
+--Scripts updated 6-7-25 -Shot
+Updated Arsenal
+removed AAbase as its not working
+All old arsenal code removed
+updated LogisticalResupplyScript
+	-added new Statics Box
+	-moved radios and NVGs to one box
+added base3 - Opdems now have 4 boxs
++a lot of clean up
+
+--Scripts updated 15-4-25 -Shot
+Updated Vehicle Packer
+	-Now move's the vehicle and move's to new pos on recall
+Arsenal code updated
+	-Added more into Arsenal
+	-fn_NewArsenalitems rename to fn_Arsenalitems
+	-fn_Arsenalitems rename to fn_OldArsenalitems
+	-removed the levels for the time being
+Updated Opdems
+	-redone how Opdems are sapwned
+Updated Variable states
+	-Startup now sets to true when configuration is done by the server
+	-new GameOn and EndEx text
+	-EndEx now spawns the Bererts boxs and 2x flags
+Made a new AAbase fnc
+	-This is for MM to make AA zone's
+	-A how to is to be made
+Logistical supply updates
+	-Wheels spawn now spawns 10x within a box loader crate
+	-Tracks spawn now spawns 10x within a box loader crate
+	-Names have been updated to say Box Of XX
+Updated fortify loadin code
+	-code now has 1 main list (_fortifylist)
+	-code now has 6 sup lists
+	-Added more to the fortify tool
+
+--Scripts updated 18-3-25 -Shot
+Fixed respawn mover
+	-marker was set to respawn_west is now set to respawn
+Updated Vehicle Packer
+	-Box type moved from xx to Land_WoodenBox_02_F
+	-added a Airframe packer to the box
+	-made a check to landVehicle Packer to not pack pallet jacks
+Added the code for Vehicle SATCOM in
+	-MORfunctions folder
+Added code for updated arsenal
+	-fn_NewArsenalitems added
+	-Newconfiguration added
+	-fn_UpdateArsenalitems added
+	-added Medic level to arsenal
+	-added Engineer level to arsenal
+	-added EOD level to arsenal
+Updated fn_mainInit for arsenal update
+removed Gearcheck code and Fnc
+added code to initPlayerLocal for MOR SATCOM
+
+--Scripts updated 20-2-25 -Shot
+updated Reaper box 1
+	-150Rnd_mas_aus_762x51_Mag (was 5 - now 10)
+	-rhs_mag_mk84 added (set at 5)
+	-KAR_20Rnd_Fury_GT_blk (was 20 - now 30)
+	-KAR_100Rnd_Fury_YT (was 7 - now 5)
+	-SMA_20Rnd_762x51mm_Mk316_Mod_0_Special_Long_Range removed
+	-SMA_30Rnd_68x43_BT removed
+update Reaper box 2
+	-Stinger_mas_aus (was 10 - now 5)
+	-MAA_MAAWS_GMM_HEAT (was 10 - now 5)
+	-MRAWS_HEAT_F added (set at 7)
+added new Metis launcher Box
+	-launch_O_Vorona_green_F (set at 2)
+	-Vorona_HEAT (set at 10)
+	-Vorona_HE (set at 5)
+updated Arsenal config to add
+	-launch_O_Vorona_green_F
+updated LogisticalResupplyScript
+	-added Metis launcher box under Statics action
+
+--Scripts updated 11-2-25 -Shot
+Fix to Vehicle Packer
+	-fix to make all players to see the Vehicle Packer
+	-removed box spwaning when Vehicle is unpacked
+
+--Scripts updated 4-2-25 -Shot
+Added Vehicle Packer
+updated Arsenal config to add -
+	-rhsusf_weap_MP7A2_folded
+	-hgun_PDW2000_F
+fixed nameme.sqf within loadup
+
+--Scripts updated 12-1-25 -Shot
+(Start of updates notes)

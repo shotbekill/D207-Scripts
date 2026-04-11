@@ -1,0 +1,23 @@
+params ["_packerbox"];
+_nearestObjects = nearestObjects [_packerbox, ["LandVehicle"], 10];
+_victopack = _nearestObjects select 0;
+if (isNil "_victopack") exitWith {systemChat "No Vehicle in 10M to Pack";};
+if (typeOf _victopack == "boxloader_pallet_jack") then {_victopack = _nearestObjects select 1;};
+if (typeOf _victopack == "boxloader_pallet_jack") exitWith {systemChat "No Vehicle in 10M to Pack";};
+_description = getDescription _victopack;
+_className = _description select 0;
+_displayName = getText (configFile >> "CfgVehicles" >> _className >> "displayName");
+_victopack setPos [getPos _victopack select 0, getPos _victopack select 1, (getPos _victopack select 2) +5000];
+sleep 1;
+_victopack allowDamage false;
+_victopack enableSimulation false;
+_victopack hideObjectGlobal true;
+deleteVehicle _packerbox;
+_victopackpos = getPos _victopack;
+_packbox = "B_Slingload_01_Cargo_F" createVehicle _victopackpos;
+clearItemCargoGlobal _packbox;
+clearMagazineCargoGlobal _packbox;
+clearBackpackCargoGlobal _packbox;
+clearWeaponCargoGlobal _packbox;
+
+[_displayName, _victopack, _packbox] remoteExec ["D207_fnc_unboxvic", 0];
