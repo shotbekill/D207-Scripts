@@ -9,4 +9,6 @@ _curator = _group createUnit ["ModuleCurator_F", [0,0,0], [], 0, "NONE"];
 _unit assignCurator _curator;
 _curator addCuratorAddons activatedAddons;
 _curator addCuratorEditableObjects [allMissionObjects "AllVehicles", true];
+waitUntil {sleep 5;!alive _unit;};
+deleteVehicle _curator;
 } else {_unit setDamage 1;};

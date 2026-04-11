@@ -78,6 +78,7 @@ _uid = getPlayerUID player;
 if (_uid in D207_ZeusUID) then {
 	_Player = player;
 	[_Player] remoteExec ["D207_fnc_NewZeus", 2];
+	player addEventHandler ["Respawn", {[player] remoteExec ["D207_fnc_NewZeus", 2];}];
 };
 
 player setVariable ["D207_PlayerConfig", "9-04-26", false];
