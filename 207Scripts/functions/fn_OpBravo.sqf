@@ -10,26 +10,29 @@ _Box1itemlist = [
 	["SMA_30Rnd_68x43_BT", 20]
 ];
 _Box2itemlist = [
-	["rhs_weap_M136", 5],
-	["KAR_100Rnd_Fury_YT", 15],
-	["rhs_weap_m72a7", 5]
-];
-_Box3itemlist = [
+	["ACE_Banana", 10],
 	["prpl_8Rnd_12Gauge_Pellets", 10],
 	["ACE_HuntIR_M203", 15],
-	["ACE_IR_Strobe_Item", 10],
-	["DemoCharge_Remote_Mag", 10],
 	["SmokeShellBlue", 5],
 	["SmokeShellGreen", 5],
 	["SmokeShellYellow", 20],
-	["SatchelCharge_Remote_Mag", 5],
 	["rhs_mag_M397_HET", 40],
 	["rhs_mag_M433_HEDP", 20],
- 	["HandGrenade", 15],
- 	["rhs_mag_mk84", 20],
- 	["rhs_mag_m713_Red", 8],
- 	["rhs_mag_m716_yellow", 20],
-	["ACE_Banana", 10]
+	["rhs_mag_m713_Red", 8],
+	["rhs_mag_m716_yellow", 20]
+];
+_Box3itemlist = [
+	["GX_1RND_DRONE40_RECON_M203", 5],
+	["KAR_100Rnd_Fury_YT", 15],
+	["ACE_IR_Strobe_Item", 10],
+	["DemoCharge_Remote_Mag", 10],
+	["SatchelCharge_Remote_Mag", 5],
+	["HandGrenade", 15],
+	["rhs_mag_mk84", 20],
+	["rhs_mag_smaw_HEDP", 2],
+	["rhs_mag_smaw_HEAA", 2],
+	["rhs_weap_M136", 5],
+	["rhs_weap_m72a7", 5]
 ];
 _BoxOBJs = [];
 _boxtypeA = 0;

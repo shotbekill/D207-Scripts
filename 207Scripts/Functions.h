@@ -48,7 +48,6 @@ class D207
 		class Moverespawnnow {};
 		class NameUAV {};
 		class NameUAVCheck {};
-		class NewZeus {};
 		class NVG {};
 		class OpAlpha {};
 		class OpBravo {};

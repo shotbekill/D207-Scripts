@@ -4,7 +4,7 @@ _backInit = ctrlText 1401;
 _backMain = ctrlText 1402;
 _backConfig = ctrlText 1403;
 
-_Scriptupdate = "9-04-26";
+_Scriptupdate = "16-04-26";
 _PlayerConfig = player getVariable "D207_PlayerConfig";
 _ServerConfig = missionNamespace getVariable "D207_ServerConfig";
 _PlayerConfigInit = player getVariable "D207_PlayerConfigInit";

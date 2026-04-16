@@ -8,8 +8,6 @@ _Box1itemlist = [
 	["ADFRC_HK417_Black", 2],
 	["SMA_ACRREMblk", 2],
 	["SMA_supp2smaB_556", 2],
-	["rhs_weap_fgm148", 1],
-	["launch_MRAWS_green_F", 2],
 	["rhs_weap_M320", 2],
 	["SMA_ELCAN_SPECTER_RDS_4z", 2],
 	["SMA_ELCAN_SPECTER_ARDRDS_4z", 2],
@@ -24,9 +22,15 @@ _Box2itemlist = [
 	["ACE_Kestrel4500", 2],
 	["ACE_HuntIR_M203", 3],
 	["SmokeShellYellow", 10],
-	["1Rnd_SmokeYellow_Grenade_shell", 10]
+	["1Rnd_SmokeYellow_Grenade_shell", 10],
+	["rhs_mag_M433_HEDP", 10],
+	["rhs_mag_mk84", 10],
+	["rhs_mag_m67", 10],
+	["GX_1RND_DRONE40_RECON_M203", 5]
 ];
 _Box3itemlist = [
+	["launch_O_Titan_short_F", 1],
+	["launch_MRAWS_green_F", 2],
 	["KAR_100Rnd_Fury_RT_blk", 5],
 	["ADFRC_150Rnd_762_Belt_TR5", 15],
 	["KAR_20Rnd_Fury_RT_blk", 30],
@@ -38,10 +42,8 @@ _Box3itemlist = [
 	["MAA_MAAWS_GMM_MT", 5],
 	["rhsusf_100Rnd_762x51_m61_ap", 10],
 	["rhsusf_100Rnd_556x45_M995_soft_pouch", 10],
-	["rhs_fgm148_magazine_AT", 5],
-	["rhs_mag_M433_HEDP", 10],
-	["rhs_mag_mk84", 10],
-	["rhs_mag_m67", 10]
+	["Titan_AT", 10],
+	["Titan_AP", 10]
 ];
 _BoxOBJs = [];
 _boxtypeA = 0;

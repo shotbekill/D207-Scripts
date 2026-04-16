@@ -7,26 +7,27 @@ _Box1itemlist = [
 	["rhs_mag_100Rnd_556x45_M855A1_cmag_mixed", 15]
 ];
 _Box2itemlist = [
-	["prpl_8Rnd_12Gauge_Pellets", 10],
-	["rhsusf_100Rnd_556x45_M995_soft_pouch", 50],
-	["rhs_weap_m72a7", 10]
-];
-_Box3itemlist = [
-	["ACE_launch_NLAW_ready_F", 4],
-	["NLAW_F", 4],
 	["ACE_HuntIR_M203", 15],
-	["ACE_IR_Strobe_Item", 10],
-	["DemoCharge_Remote_Mag", 10],
 	["SmokeShellBlue", 5],
 	["SmokeShellGreen", 5],
 	["SmokeShellYellow", 20],
-	["SatchelCharge_Remote_Mag", 5],
 	["rhs_mag_M397_HET", 30],
 	["rhs_mag_M433_HEDP", 30],
- 	["HandGrenade", 20],
- 	["rhs_mag_mk84", 20],
- 	["rhs_mag_m713_Red", 8],
-	["rhs_mag_m716_yellow", 20]
+	["rhs_mag_m713_Red", 8],
+	["rhs_mag_m716_yellow", 20],
+	["GX_1RND_DRONE40_RECON_M203", 5]
+];
+_Box3itemlist = [
+	["prpl_8Rnd_12Gauge_Pellets", 10],
+	["rhsusf_200Rnd_556x45_soft_pouch", 25],
+	["rhs_weap_m72a7", 10],
+	["ACE_launch_NLAW_ready_F", 4],
+	["NLAW_F", 4],
+	["ACE_IR_Strobe_Item", 10],
+	["DemoCharge_Remote_Mag", 10],
+	["SatchelCharge_Remote_Mag", 5],
+	["HandGrenade", 20],
+ 	["rhs_mag_mk84", 20]
 ];
 _BoxOBJs = [];
 _boxtypeA = 0;

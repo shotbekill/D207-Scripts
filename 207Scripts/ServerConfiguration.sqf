@@ -20,7 +20,7 @@ D207_Drones = ["GX_DEPLOYABLE_MAGAZINE_UAV_01","GX_DEPLOYABLE_MAGAZINE_UAV_06","
 D207_VehicleListPlatoon = ["adfrc_bushmaster_pws127mm_F","ADFRC_ASLAV_PC_RWS_GWOT","rhsusf_mrzr4_d","NDS_6x6_ATV_MIL_EMPTY","rhsusf_m966_d","adfrc_bushmaster_unarmed_command_F","adfrc_bushmaster_unarmed_mev_F","rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy","rhsusf_M1232_M2_usarmy_d"];
 D207_VehicleListFoxtrot = ["ADFRC_hemtt_flatbed","rhsusf_M1239_M2_socom_d","rhsusf_M1084A1R_SOV_M2_D_fmtv_socom","rhsusf_stryker_m1132_m2_d","rhsusf_m109d_usarmy","RHS_M119_D","I_LT_01_AT_F","I_LT_01_cannon_F","I_LT_01_AA_F","ADFRC_ASLAV","I_APC_Wheeled_03_cannon_F","RHS_M2A3_BUSKIII_wd","RHS_M6_wd","B_AFV_Wheeled_01_up_cannon_F","rhsusf_m1a2sep2wd_usarmy"];
 D207_VehicleListHawkeye = ["vtx_MH60M","vtx_MH60M_DAP_MLASS","RHS_MELB_AH6M","RHS_MELB_MH6M","adfrc_apache","B_Heli_Attack_01_dynamicLoadout_F","B_Heli_Attack_01_pylons_dynamicLoadout_F","RHS_CH_47F","RHS_CH_47F_cargo","B_Plane_Fighter_01_F","B_Plane_Fighter_01_Stealth_F","B_Plane_CAS_01_dynamicLoadout_F","RHS_C130J","RHS_C130J_Cargo"];
-D207_VehicleListDrone = ["GX_B_HONEYBADGER_UGV_AT_BLACK","B_UAV_01_F","B_UGV_01_rcws_F","GX_B_MQ8B_UAV_RECON_SEATED","GX_B_MQ8B_UAV_RECON","GX_B_MQ8B_UAV_ARMED","B_T_UAV_03_dynamicLoadout_F","B_UAV_02_dynamicLoadout_F","B_UAV_05_F"];
+D207_VehicleListDrone = ["GX_B_HONEYBADGER_UGV_AT_BLACK","B_UAV_01_F","GX_B_THEMIS_UGV_CARGO","B_UGV_01_rcws_F","GX_B_MQ8B_UAV_RECON_SEATED","GX_B_MQ8B_UAV_RECON","GX_B_MQ8B_UAV_ARMED","B_T_UAV_03_dynamicLoadout_F","B_UAV_02_dynamicLoadout_F","B_UAV_05_F"];
 
 _Mags = [];
 _Atmet = [];
@@ -101,15 +101,4 @@ publicVariable "D207_VehicleListPlatoon";
 publicVariable "D207_VehicleListFoxtrot";
 publicVariable "D207_VehicleListHawkeye";
 publicVariable "D207_VehicleListDrone";
-missionNamespace setVariable ["D207_ServerConfig", "9-04-26", true];
-_UIDAdmin = ["76561197980599834","76561198150437514","76561198061252654","76561198036413321","76561198019387579"];
-_UIDZeus = ["76561198038689744","76561198084102373","76561198026156836"];
-_UIDs = ["76561198088515338"];
-{
-	_UIDs append [_x];
-} forEach _UIDAdmin;
-{
-	_UIDs append [_x];
-} forEach _UIDZeus;
-D207_ZeusUID = _UIDs;
-publicVariable "D207_ZeusUID";
+missionNamespace setVariable ["D207_ServerConfig", "16-04-26", true];

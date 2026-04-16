@@ -16,40 +16,32 @@ _Box2itemlist = [
 	["ClaymoreDirectionalMine_Remote_Mag", 10]
 ];
 _Box3itemlist = [
+	["GX_1RND_DRONE40_RECON_M203", 5],
 	["KAR_100Rnd_Fury", 10],
 	["ADFRC_250Rnd_556_Minimi_TR", 10],
-	["prpl_8Rnd_12Gauge_Pellets", 10],
-	["ACE_HuntIR_M203", 15],
+	["ACE_HuntIR_M203", 10],
 	["ACE_IR_Strobe_Item", 10],
 	["rhs_mag_M433_HEDP", 40],
 	["rhs_mag_M397_HET", 40],
-	["ItemAndroid", 3],
 	["ACE_VMH3", 1],
 	["ACE_CableTie", 20],
 	["ace_marker_flags_green", 10],
 	["ace_marker_flags_red", 10],
  	["tfw_rf3080Item", 1],
- 	["ACE_SpraypaintGreen", 10],
  	["ACE_DefusalKit", 1],
- 	["ACE_EntrenchingTool", 10],
- 	["ACE_Tripod", 10],
+ 	["ACE_EntrenchingTool", 2],
+ 	["ACE_Tripod", 2],
  	["ACE_wirecutter", 2],
-	["ACE_EarPlugs", 1],
-	["ACE_EHP", 10],
 	["ACE_IR_Strobe_Item", 1],
 	["kat_gasmaskFilter", 10],
-	["ACE_MapTools", 3],
 	["rhsusf_mag_17Rnd_9x19_FMJ", 20],
 	["rhsusf_mag_40Rnd_46x30_AP", 5],
 	["Laserdesignator", 2],
 	["Laserbatteries", 2],
-	["ItemcTab", 3],
 	["ACE_HuntIR_monitor", 2],
 	["rhs_weap_M136", 8],
 	["rhs_weap_M320", 2],
-	["MineDetector", 2],
-	["rhs_mag_smaw_HEDP", 10],
-	["rhsusf_weap_MP7A2_folded", 1]
+	["rhs_mag_smaw_HEDP", 10]
 ];
 _BoxOBJs = [];
 _boxtypeA = 0;
