@@ -23,7 +23,7 @@ _Box2itemlist = [
 ];
 _Box3itemlist = [
 	["GX_1RND_DRONE40_RECON_M203", 5],
-	["KAR_100Rnd_Fury_YT", 15],
+	["KAR_100Rnd_Fury_YT", 20],
 	["ACE_IR_Strobe_Item", 10],
 	["DemoCharge_Remote_Mag", 10],
 	["SatchelCharge_Remote_Mag", 5],

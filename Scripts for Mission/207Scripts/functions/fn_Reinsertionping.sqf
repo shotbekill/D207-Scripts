@@ -6,5 +6,5 @@ _Pname = name _playrtoping;
 private _playrping = parseText format ["<t size='1.25' color='#ff0000'>A ping has been sent, Please wait next to the sign for a Hawkeye pilot"];
 _playrping remoteExec ["hint", _playrtoping];
 private _callteext = parseText format ["<t size='1.25' color='#ff0000'>%1 is waiting for reinsertion from Base", _Pname]; 
-_Pingteam = ["ZB1","ZR1","ZG1","PHQB1","PHQB2","PHQR1","PHQR2","PHQG1","PHQG2","HEB1","HEB2","HEB3","HER1","HER2","HER3","HEG1","HEG2","HEG3"]; 
+_Pingteam = ["BZ1","BZ2","B1PHQ","B5PHQ","BHEC","BHE2","BHES","RZ1","RZ2","R1PHQ","R5PHQ","RHEC","RHE2","RHES","GZ1","GZ2","G1PHQ","G5PHQ","GHEC","GHE2","GHES"]; 
 _callteext remoteExec ["hint", _Pingteam];

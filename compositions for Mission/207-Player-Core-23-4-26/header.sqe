@@ -1,0 +1,16 @@
+version=54;
+name="207-Player-Core-23-4-26";
+author="shot_be_kill";
+category="ace_main_subcategory";
+requiredAddons[]=
+{
+	"A3_Modules_F_Curator_Curator",
+	"A3_Characters_F",
+	"A3_Weapons_F",
+	"tfar_handhelds",
+	"cTab",
+	"ADFRC_Gear_Uniforms",
+	"FIR_PilotCrewPack_US",
+	"ace_gforces",
+	"ace_parachute"
+};

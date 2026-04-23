@@ -32,7 +32,7 @@ _Charlie = ["Charlie", "Charlie Box","",{[_target] spawn D207_fnc_OpCharlie;}, {
 _Reaper = ["Reaper", "Reaper Box","",{[_target] spawn D207_fnc_OpReaper;}, {true}] call ace_interact_menu_fnc_createAction;
 [_box, 0, ["D207", "Core1", "Core11"], _Reaper]  call ace_interact_menu_fnc_addActionToObject;
 
-_PlatHQ = ["PlatHQ", "PHQ","",{[_target] spawn D207_fnc_PlatHQfull;}, {true}] call ace_interact_menu_fnc_createAction;
+_PlatHQ = ["PlatHQ", "PHQ","",{[_target] spawn D207_fnc_OpPHQ;}, {true}] call ace_interact_menu_fnc_createAction;
 [_box, 0, ["D207", "Core1", "Core11"], _PlatHQ]  call ace_interact_menu_fnc_addActionToObject;
 
 _Ghost = ["Ghost", "Ghost","",{[_target] spawn D207_fnc_Ghost;}, {true}] call ace_interact_menu_fnc_createAction;

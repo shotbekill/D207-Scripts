@@ -1,0 +1,928 @@
+version=54;
+center[]={5666.5596,2.5,3654.1895};
+class items
+{
+	items=1;
+	class Item0
+	{
+		dataType="Layer";
+		name="207-Core";
+		class Entities
+		{
+			items=6;
+			class Item0
+			{
+				dataType="Layer";
+				name="Arsenals";
+				class Entities
+				{
+					items=6;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={54.44043,3.3924227,35.810547};
+							angles[]={-0,4.712389,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="this spawn D207_fnc_Arsenalitems;";
+						};
+						id=6608;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={52.44043,3.3924227,35.810547};
+							angles[]={-0,4.712389,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="this spawn D207_fnc_Arsenalitems;";
+						};
+						id=7403;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={50.44043,3.3924227,35.810547};
+							angles[]={-0,4.712389,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="this spawn D207_fnc_Arsenalitems;";
+						};
+						id=7404;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item3
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={48.44043,3.3924227,35.810547};
+							angles[]={-0,4.712389,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="this spawn D207_fnc_Arsenalitems;";
+						};
+						id=7405;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+					class Item4
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={50.44043,2.5,36.810547};
+						};
+						title="Arsenals";
+						id=6664;
+					};
+					class Item5
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={46.44043,3.3924227,35.810547};
+							angles[]={-0,4.712389,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="this spawn D207_fnc_Arsenalitems;";
+						};
+						id=13976;
+						type="B_supplyCrate_F";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ammoBox";
+								expression="[_this,_value] call bis_fnc_initAmmoBox;";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+									};
+								};
+							};
+							nAttributes=1;
+						};
+					};
+				};
+				id=5872;
+			};
+			class Item1
+			{
+				dataType="Layer";
+				name="Modules";
+				class Entities
+				{
+					items=6;
+					class Item0
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={46.44043,2.5,40.810547};
+							angles[]={-0,1.672893,0};
+						};
+						id=5879;
+						type="crowsEW_editormodules_moduleSetTrackingTfar";
+					};
+					class Item1
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={46.44043,2.5,39.810547};
+							angles[]={-0,5.4691525,0};
+						};
+						title="Lets zeus track Radio Comms";
+						id=5849;
+					};
+					class Item2
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={46.19043,2.5,37.810547};
+							angles[]={-0,5.4691525,0};
+						};
+						title="Turns on Fortify tools for the Server";
+						id=5848;
+					};
+					class Item3
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={48.44043,2.5,37.810547};
+							angles[]={-0,1.6728981,0};
+						};
+						id=5881;
+						type="acex_fortify_setupModule";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ace_fortify_setupModule_Budget";
+								expression="_this setVariable ['Budget',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1000;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ace_fortify_setupModule_AddToolItem";
+								expression="_this setVariable ['AddToolItem',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ace_fortify_setupModule_Preset";
+								expression="_this setVariable ['Preset',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="smallGreen";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ace_fortify_setupModule_Side";
+								expression="_this setVariable ['Side',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=2;
+									};
+								};
+							};
+							nAttributes=4;
+						};
+					};
+					class Item4
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={49.44043,2.5,37.810547};
+							angles[]={-0,1.6728981,0};
+						};
+						id=5882;
+						type="acex_fortify_setupModule";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ace_fortify_setupModule_Budget";
+								expression="_this setVariable ['Budget',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1000;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ace_fortify_setupModule_AddToolItem";
+								expression="_this setVariable ['AddToolItem',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ace_fortify_setupModule_Preset";
+								expression="_this setVariable ['Preset',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="smallGreen";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ace_fortify_setupModule_Side";
+								expression="_this setVariable ['Side',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=3;
+									};
+								};
+							};
+							nAttributes=4;
+						};
+					};
+					class Item5
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={47.44043,2.5,37.810547};
+							angles[]={-0,1.6728981,0};
+						};
+						id=5880;
+						type="acex_fortify_setupModule";
+						class CustomAttributes
+						{
+							class Attribute0
+							{
+								property="ace_fortify_setupModule_Budget";
+								expression="_this setVariable ['Budget',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1000;
+									};
+								};
+							};
+							class Attribute1
+							{
+								property="ace_fortify_setupModule_AddToolItem";
+								expression="_this setVariable ['AddToolItem',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="BOOL";
+										value=0;
+									};
+								};
+							};
+							class Attribute2
+							{
+								property="ace_fortify_setupModule_Preset";
+								expression="_this setVariable ['Preset',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="STRING";
+										value="smallGreen";
+									};
+								};
+							};
+							class Attribute3
+							{
+								property="ace_fortify_setupModule_Side";
+								expression="_this setVariable ['Side',_value,true];";
+								class Value
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+							};
+							nAttributes=4;
+						};
+					};
+				};
+				id=5878;
+			};
+			class Item2
+			{
+				dataType="Layer";
+				name="Respawn";
+				class Entities
+				{
+					items=8;
+					class Item0
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={57.44043,2.9193115,35.310547};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							disableSimulation=1;
+						};
+						id=5884;
+						type="Land_BagFence_Long_F";
+					};
+					class Item1
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={55.94043,2.9193115,36.810547};
+							angles[]={-0,1.5707967,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							disableSimulation=1;
+						};
+						id=5885;
+						type="Land_BagFence_Long_F";
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={61.94043,2.9193115,39.810547};
+							angles[]={-0,4.712389,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							disableSimulation=1;
+						};
+						id=5886;
+						type="Land_BagFence_Long_F";
+					};
+					class Item3
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={55.94043,2.9193115,39.810547};
+							angles[]={-0,1.5707963,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							disableSimulation=1;
+						};
+						id=5887;
+						type="Land_BagFence_Long_F";
+					};
+					class Item4
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={60.44043,2.9193115,35.310547};
+							angles[]={-0,2.3841858e-07,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							disableSimulation=1;
+						};
+						id=5888;
+						type="Land_BagFence_Long_F";
+					};
+					class Item5
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={61.94043,2.9193115,36.810547};
+							angles[]={-0,4.7472959,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							disableSimulation=1;
+						};
+						id=5889;
+						type="Land_BagFence_Long_F";
+					};
+					class Item6
+					{
+						dataType="Marker";
+						position[]={58.94043,2.5,37.560547};
+						name="respawn";
+						type="Empty";
+						angle=0.33999312;
+						id=5890;
+					};
+					class Item7
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={58.94043,2.5,39.060547};
+						};
+						title="There is a Maker here that HAS to be moved with the sandbags!";
+						id=5870;
+					};
+				};
+				id=5883;
+			};
+			class Item3
+			{
+				dataType="Layer";
+				name="Triggers";
+				class Entities
+				{
+					items=9;
+					class Item0
+					{
+						dataType="Trigger";
+						position[]={48.19043,2.5,40.810547};
+						class Attributes
+						{
+							condition="missionNamespace getVariable ""LoadIn"";";
+							onActivation="player spawn D207_fnc_LoadIn;";
+							sizeA=0;
+							sizeB=0;
+							repeatable=1;
+							triggerInterval=1;
+						};
+						id=5906;
+						type="EmptyDetector";
+					};
+					class Item1
+					{
+						dataType="Trigger";
+						position[]={50.19043,2.5,40.810547};
+						class Attributes
+						{
+							condition="missionNamespace getVariable ""Gameon"";";
+							onActivation="player spawn D207_fnc_GameOn;";
+							sizeA=0;
+							sizeB=0;
+							repeatable=1;
+							triggerInterval=1;
+						};
+						id=5907;
+						type="EmptyDetector";
+					};
+					class Item2
+					{
+						dataType="Trigger";
+						position[]={52.19043,2.5,40.810547};
+						class Attributes
+						{
+							condition="missionNamespace getVariable ""GameStop"";";
+							onActivation="player spawn D207_fnc_GameStop;";
+							sizeA=0;
+							sizeB=0;
+							repeatable=1;
+							triggerInterval=1;
+						};
+						id=5908;
+						type="EmptyDetector";
+					};
+					class Item3
+					{
+						dataType="Trigger";
+						position[]={54.19043,2.5,40.810547};
+						class Attributes
+						{
+							condition="missionNamespace getVariable ""endex"";";
+							onActivation="player spawn D207_fnc_EndEx;";
+							sizeA=0;
+							sizeB=0;
+							repeatable=1;
+							triggerInterval=1;
+						};
+						id=5909;
+						type="EmptyDetector";
+					};
+					class Item4
+					{
+						dataType="Trigger";
+						position[]={58.94043,2.5,38.310547};
+						class Attributes
+						{
+							name="Respawntrigger";
+							onActivation="[thisTrigger] spawn D207_fnc_Reinsertionping;";
+							sizeA=3;
+							sizeB=3;
+							sizeC=3;
+							timeout[]={3,3,3};
+							interuptable=1;
+							repeatable=1;
+							activationBy="ANYPLAYER";
+							isRectangle=1;
+							isServerOnly=1;
+						};
+						id=5918;
+						type="EmptyDetectorAreaR50";
+					};
+					class Item5
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={50.19043,2.5,39.810547};
+						};
+						title="This is the Gameon trigger";
+						id=5854;
+					};
+					class Item6
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={52.19043,2.5,39.810547};
+						};
+						title="This is the GameStop trigger";
+						id=5857;
+					};
+					class Item7
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={48.19043,2.5,39.810547};
+						};
+						title="This is the LoadIn trigger";
+						id=5855;
+					};
+					class Item8
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={54.19043,2.5,39.810547};
+						};
+						title="This is the endex trigger";
+						id=5858;
+					};
+				};
+				id=5904;
+			};
+			class Item4
+			{
+				dataType="Layer";
+				name="Logi";
+				class Entities
+				{
+					items=9;
+					class Item0
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={65.94043,2.5,34.810547};
+							angles[]={-0,1.4592981,0};
+						};
+						title="Hawkeye Logi";
+						id=5859;
+					};
+					class Item1
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={72.94043,2.5,34.810547};
+							angles[]={-0,2.3269246,0};
+						};
+						title="foxtrot logi";
+						id=5860;
+					};
+					class Item2
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={66.19043,4.9179983,38.060547};
+							angles[]={0,3.1415925,-0};
+						};
+						side="Empty";
+						flags=5;
+						class Attributes
+						{
+							init="this execVM ""207Scripts\LogisticalResupplyScript.sqf"";";
+							disableSimulation=1;
+						};
+						id=13975;
+						type="Land_RepairDepot_01_tan_F";
+					};
+					class Item3
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={71.44043,4.9179983,30.060547};
+							angles[]={0,4.712389,-0};
+						};
+						side="Empty";
+						flags=5;
+						class Attributes
+						{
+							init="_D207 = [""D207"", ""<t color='#207207'>Vehicle Spawner</t>"","""",{[_target] execVM ""207Scripts\Vehiclespawner\StartDialog.sqf""}, {true}, {}, [], [0, 0, -1], 7] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [], _D207]  call ace_interact_menu_fnc_addActionToObject;";
+							disableSimulation=1;
+						};
+						id=13974;
+						type="Land_RepairDepot_01_civ_F";
+					};
+					class Item4
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={51.44043,2.5005002,30.060547};
+							angles[]={0,1.5707965,-0};
+						};
+						side="Empty";
+						flags=5;
+						class Attributes
+						{
+							presenceCondition="false";
+						};
+						id=8634;
+						type="VR_Area_01_circle_4_yellow_F";
+					};
+					class Item5
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={68.19043,2.5,30.310547};
+							angles[]={-0,1.5707965,0};
+						};
+						title="Vehicle Spawner";
+						id=8642;
+					};
+					class Item6
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={50.69043,2.5,30.060547};
+							angles[]={-0,1.5707965,0};
+						};
+						title="The helper can be deleted if need But the Helpers Presence is set to false so it won't spawn in mission";
+						id=8644;
+					};
+					class Item7
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={52.19043,2.5,30.060547};
+							angles[]={-0,1.5707965,0};
+						};
+						title="Vehicle's will Spawn here (20M away from the Vehicle Spawner it self)";
+						id=8643;
+					};
+					class Item8
+					{
+						dataType="Object";
+						class PositionInfo
+						{
+							position[]={73.19043,4.9179983,38.060547};
+							angles[]={-0,3.1415925,0};
+						};
+						side="Empty";
+						flags=4;
+						class Attributes
+						{
+							init="this execVM ""207Scripts\LogisticalResupplyScript.sqf"";";
+							disableSimulation=1;
+						};
+						id=13979;
+						type="Land_RepairDepot_01_green_F";
+					};
+				};
+				id=5910;
+			};
+			class Item5
+			{
+				dataType="Layer";
+				name="Headless Clients";
+				class Entities
+				{
+					items=6;
+					class Item0
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={57.44043,2.5,31.810547};
+						};
+						name="HC_1";
+						isPlayable=1;
+						id=5914;
+						type="HeadlessClient_F";
+					};
+					class Item1
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={61.44043,2.5,31.810547};
+						};
+						name="HC_2";
+						isPlayable=1;
+						id=5915;
+						type="HeadlessClient_F";
+					};
+					class Item2
+					{
+						dataType="Logic";
+						class PositionInfo
+						{
+							position[]={65.44043,2.5,31.810547};
+						};
+						name="HC_3";
+						isPlayable=1;
+						id=5916;
+						type="HeadlessClient_F";
+					};
+					class Item3
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={57.44043,2.5,30.810547};
+						};
+						title="HeadLess Client 1";
+						id=5867;
+					};
+					class Item4
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={61.44043,2.5,30.810547};
+						};
+						title="HeadLess Client 2";
+						id=5868;
+					};
+					class Item5
+					{
+						dataType="Comment";
+						class PositionInfo
+						{
+							position[]={65.44043,2.5,30.810547};
+						};
+						title="HeadLess Client 3";
+						id=5869;
+					};
+				};
+				id=5913;
+			};
+		};
+		id=5919;
+		atlOffset=-2.5;
+	};
+};
