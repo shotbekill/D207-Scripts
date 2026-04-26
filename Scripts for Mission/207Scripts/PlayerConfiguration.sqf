@@ -72,4 +72,4 @@ publicVariable "D207_VehicleListDrone";
 _hinttext = parseText format ["%1 Added to the Drone Vehicle Spawner", _Vehtoaddtpye];
 hint _hinttext;
 }] call zen_custom_modules_fnc_register;
-player setVariable ["D207_PlayerConfig", "9-04-26", false];
+player setVariable ["D207_PlayerConfig", "26-04-26", false];

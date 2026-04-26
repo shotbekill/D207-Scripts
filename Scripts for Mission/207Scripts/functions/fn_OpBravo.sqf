@@ -29,8 +29,7 @@ _Box3itemlist = [
 	["SatchelCharge_Remote_Mag", 5],
 	["HandGrenade", 15],
 	["rhs_mag_mk84", 20],
-	["rhs_mag_smaw_HEDP", 2],
-	["rhs_mag_smaw_HEAA", 2],
+	["rhs_mag_smaw_HEAA", 6],
 	["rhs_weap_M136", 5],
 	["rhs_weap_m72a7", 5]
 ];
