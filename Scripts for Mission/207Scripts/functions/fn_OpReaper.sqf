@@ -23,7 +23,7 @@ _Box2itemlist = [
 	["ACE_HuntIR_M203", 3],
 	["SmokeShellYellow", 10],
 	["1Rnd_SmokeYellow_Grenade_shell", 10],
-	["rhs_mag_M433_HEDP", 10],
+	["rhs_mag_M433_HEDP", 30],
 	["rhs_mag_mk84", 10],
 	["rhs_mag_m67", 10],
 	["GX_1RND_DRONE40_RECON_M203", 5]

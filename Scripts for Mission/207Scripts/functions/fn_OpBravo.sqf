@@ -31,7 +31,8 @@ _Box3itemlist = [
 	["rhs_mag_mk84", 20],
 	["rhs_mag_smaw_HEAA", 6],
 	["rhs_weap_M136", 5],
-	["rhs_weap_m72a7", 5]
+	["rhs_weap_m72a7", 5],
+	["rhsusf_mag_40Rnd_46x30_FMJ", 5]
 ];
 _BoxOBJs = [];
 _boxtypeA = 0;
