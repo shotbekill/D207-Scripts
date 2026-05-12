@@ -103,4 +103,4 @@ publicVariable "D207_VehicleListPlatoon";
 publicVariable "D207_VehicleListFoxtrot";
 publicVariable "D207_VehicleListHawkeye";
 publicVariable "D207_VehicleListDrone";
-missionNamespace setVariable ["D207_ServerConfig", "26-04-26", true];
+missionNamespace setVariable ["D207_ServerConfig", "11-05-26", true];

@@ -20,9 +20,10 @@ _Box2itemlist = [
 _Box3itemlist = [
 	["prpl_8Rnd_12Gauge_Pellets", 10],
 	["rhsusf_200Rnd_556x45_soft_pouch", 25],
-	["rhs_weap_m72a7", 10],
-	["ACE_launch_NLAW_ready_F", 4],
-	["NLAW_F", 4],
+	["rhs_weap_m72a7", 5],
+	["rhs_weap_M136", 5],
+	["ACE_launch_NLAW_ready_F", 2],
+	["NLAW_F", 2],
 	["ACE_IR_Strobe_Item", 10],
 	["DemoCharge_Remote_Mag", 10],
 	["SatchelCharge_Remote_Mag", 5],
