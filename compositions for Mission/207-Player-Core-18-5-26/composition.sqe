@@ -4600,6 +4600,7 @@ class items
 								class Attributes
 								{
 									rank="LIEUTENANT";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""HQ Net"",""Air Net"",""CAS Net""]];";
 									name="B5PHQ";
 									description="Platoon Commander (PHQ-5) @1-5PHQ";
 									isPlayable=1;
@@ -4630,7 +4631,7 @@ class items
 											class data
 											{
 												singleType="SCALAR";
-												value=0;
+												value=1;
 											};
 										};
 									};
@@ -4682,7 +4683,7 @@ class items
 											class data
 											{
 												singleType="SCALAR";
-												value=0;
+												value=1;
 											};
 										};
 									};
@@ -4702,6 +4703,8 @@ class items
 								class Attributes
 								{
 									rank="SERGEANT";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""HQ Net"",""Air Net"",""CAS Net""]];";
+									name="B5PHQ2";
 									description="Platoon Sergeant (PHQ-2)";
 									isPlayable=1;
 									class Inventory
@@ -4724,6 +4727,32 @@ class items
 								{
 									class Attribute0
 									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute2
+									{
 										property="speaker";
 										expression="_this setspeaker _value;";
 										class Value
@@ -4735,7 +4764,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
+									class Attribute3
 									{
 										property="pitch";
 										expression="_this setpitch _value;";
@@ -4748,7 +4777,7 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									nAttributes=4;
 								};
 							};
 						};
@@ -6044,7 +6073,7 @@ class items
 								class Attributes
 								{
 									rank="LIEUTENANT";
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""HQ Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""HQ Net"",""CAS Net""]];";
 									name="BHEC";
 									description="Flight Lieutenant (H-1) @1-5H";
 									isPlayable=1;
@@ -6134,7 +6163,7 @@ class items
 								class Attributes
 								{
 									rank="SERGEANT";
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""HQ Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""HQ Net"",""CAS Net""]];";
 									name="BHE2";
 									description="Flight Sergeant (H-2)";
 									isPlayable=1;
@@ -6236,7 +6265,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									name="BHES";
 									description="Snr Pilot  (H-3)";
 									isPlayable=1;
@@ -6325,7 +6354,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									description="Pilot (H-4)";
 									isPlayable=1;
 									class Inventory
@@ -6413,7 +6442,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									description="Pilot (H-5)";
 									isPlayable=1;
 									class Inventory
@@ -6501,7 +6530,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									description="Jr Pilot (H-6)";
 									isPlayable=1;
 									class Inventory
@@ -6589,7 +6618,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									description="Jr Pilot (H-7)";
 									isPlayable=1;
 									class Inventory
@@ -11928,6 +11957,7 @@ class items
 								class Attributes
 								{
 									rank="LIEUTENANT";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""HQ Net"",""Air Net"",""CAS Net""]];";
 									name="R5PHQ";
 									description="Platoon Commander (PHQ-5) @1-5PHQ";
 									isPlayable=1;
@@ -11958,7 +11988,7 @@ class items
 											class data
 											{
 												singleType="SCALAR";
-												value=0;
+												value=1;
 											};
 										};
 									};
@@ -12010,7 +12040,7 @@ class items
 											class data
 											{
 												singleType="SCALAR";
-												value=0;
+												value=1;
 											};
 										};
 									};
@@ -12030,6 +12060,8 @@ class items
 								class Attributes
 								{
 									rank="SERGEANT";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""HQ Net"",""Air Net"",""CAS Net""]];";
+									name="R5PHQ2";
 									description="Platoon Sergeant (PHQ-2)";
 									isPlayable=1;
 									class Inventory
@@ -12052,6 +12084,32 @@ class items
 								{
 									class Attribute0
 									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute2
+									{
 										property="speaker";
 										expression="_this setspeaker _value;";
 										class Value
@@ -12063,7 +12121,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
+									class Attribute3
 									{
 										property="pitch";
 										expression="_this setpitch _value;";
@@ -12076,7 +12134,7 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									nAttributes=4;
 								};
 							};
 						};
@@ -13346,7 +13404,7 @@ class items
 								class Attributes
 								{
 									rank="LIEUTENANT";
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""HQ Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""HQ Net"",""CAS Net""]];";
 									name="RHEC";
 									description="Flight Lieutenant (H-1) @1-5H";
 									isPlayable=1;
@@ -13436,7 +13494,7 @@ class items
 								class Attributes
 								{
 									rank="SERGEANT";
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""HQ Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""HQ Net"",""CAS Net""]];";
 									name="RHE2";
 									description="Flight Sergeant (H-2)";
 									isPlayable=1;
@@ -13538,7 +13596,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									name="RHES";
 									description="Snr Pilot  (H-3)";
 									isPlayable=1;
@@ -13627,7 +13685,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									description="Pilot (H-4)";
 									isPlayable=1;
 									class Inventory
@@ -13715,7 +13773,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									description="Pilot (H-5)";
 									isPlayable=1;
 									class Inventory
@@ -13803,7 +13861,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									description="Jr Pilot (H-6)";
 									isPlayable=1;
 									class Inventory
@@ -13891,7 +13949,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									description="Jr Pilot (H-7)";
 									isPlayable=1;
 									class Inventory
@@ -19240,6 +19298,7 @@ class items
 								class Attributes
 								{
 									rank="LIEUTENANT";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""HQ Net"",""Air Net"",""CAS Net""]];";
 									name="G5PHQ";
 									description="Platoon Commander (PHQ-5) @1-5PHQ";
 									isPlayable=1;
@@ -19270,7 +19329,7 @@ class items
 											class data
 											{
 												singleType="SCALAR";
-												value=0;
+												value=1;
 											};
 										};
 									};
@@ -19322,7 +19381,7 @@ class items
 											class data
 											{
 												singleType="SCALAR";
-												value=0;
+												value=1;
 											};
 										};
 									};
@@ -19342,6 +19401,8 @@ class items
 								class Attributes
 								{
 									rank="SERGEANT";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""HQ Net"",""Air Net"",""CAS Net""]];";
+									name="G5PHQ2";
 									description="Platoon Sergeant (PHQ-2)";
 									isPlayable=1;
 									class Inventory
@@ -19364,6 +19425,32 @@ class items
 								{
 									class Attribute0
 									{
+										property="ace_isMedic";
+										expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute1
+									{
+										property="ace_isEngineer";
+										expression="if !(_value == ([0, 1] select (_this getUnitTrait 'engineer')) || {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+										class Value
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=1;
+											};
+										};
+									};
+									class Attribute2
+									{
 										property="speaker";
 										expression="_this setspeaker _value;";
 										class Value
@@ -19375,7 +19462,7 @@ class items
 											};
 										};
 									};
-									class Attribute1
+									class Attribute3
 									{
 										property="pitch";
 										expression="_this setpitch _value;";
@@ -19388,7 +19475,7 @@ class items
 											};
 										};
 									};
-									nAttributes=2;
+									nAttributes=4;
 								};
 							};
 						};
@@ -20658,7 +20745,7 @@ class items
 								class Attributes
 								{
 									rank="LIEUTENANT";
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""HQ Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""HQ Net"",""CAS Net""]];";
 									name="GHEC";
 									description="Flight Lieutenant (H-1) @1-5H";
 									isPlayable=1;
@@ -20748,7 +20835,7 @@ class items
 								class Attributes
 								{
 									rank="SERGEANT";
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""HQ Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""HQ Net"",""CAS Net""]];";
 									name="GHE2";
 									description="Flight Sergeant (H-2)";
 									isPlayable=1;
@@ -20850,7 +20937,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									name="GHES";
 									description="Snr Pilot  (H-3)";
 									isPlayable=1;
@@ -20939,7 +21026,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									description="Pilot (H-4)";
 									isPlayable=1;
 									class Inventory
@@ -21027,7 +21114,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									description="Pilot (H-5)";
 									isPlayable=1;
 									class Inventory
@@ -21115,7 +21202,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									description="Jr Pilot (H-6)";
 									isPlayable=1;
 									class Inventory
@@ -21203,7 +21290,7 @@ class items
 								flags=4;
 								class Attributes
 								{
-									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net""]];";
+									init="this setVariable [""VehicleSatCom_satComLinks"", [""Convoy Net"",""Air Net"",""CAS Net""]];";
 									description="Jr Pilot (H-7)";
 									isPlayable=1;
 									class Inventory

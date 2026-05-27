@@ -57,6 +57,10 @@ class D207
 		class OpReaper {};
 		class Reinsertionping {};
 		class respawnadd {};
+		class respawntele {};
+		class respawntelecheck {};
+		class respawnteleMove {};
+		class respawntelePack {};
 		class Spectator {};
 		class StaticsAA {};
 		class StaticsBox {};

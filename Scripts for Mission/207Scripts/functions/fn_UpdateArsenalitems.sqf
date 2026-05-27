@@ -26,6 +26,7 @@ if (hasInterface) then {
 	[_Arsenalbox, D207_EOD,true] call ace_arsenal_fnc_addVirtualItems;
 	[_Arsenalbox, D207_ENGLVL1,true] call ace_arsenal_fnc_addVirtualItems;
 	[_Arsenalbox, D207_Drones,true] call ace_arsenal_fnc_addVirtualItems;
+	// [_Arsenalbox, D207_TestClass,true] call ace_arsenal_fnc_addVirtualItems;
 	hint "Arsenal updated";
 	sleep 15;
 	hintSilent "";

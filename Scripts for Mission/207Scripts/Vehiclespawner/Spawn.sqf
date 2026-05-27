@@ -35,7 +35,13 @@ if (_vehicle isKindOf "vtx_H60_base") then {
 	_vehicle setObjectTextureGlobal [17, "asd207_hawkeye_textures\data\textures\d207_australia\asd207_misc_co.paa"];
 	_vehicle setObjectTextureGlobal [18, "asd207_hawkeye_textures\data\textures\d207_australia\asd207_tail_co.paa"];
 	_vehicle setObjectTextureGlobal [19, "hue_additions_h60-skins-and-markings\markings\207.paa"];
+	_vehicle animateSource ["Fuelprobe_Show", 0];
+	_vehicle animateSource ["Cockpitdoors_Hide", 0];
 };
+if (_vehicle isKindOf "B_Truck_01_medical_F") then {
+	[_vehicle] remoteExec ["D207_fnc_respawntele", 0];
+};
+
 sleep 0.5;
 _displayName = getText (configFile >>  "CfgVehicles" >> _info >> "displayName");
 _chat = format ["You have spawned a %1", _displayName];

@@ -3,6 +3,7 @@ missionNamespace setVariable ["LoadIn", false, true];
 missionNamespace setVariable ["Gameon", false, true];
 missionNamespace setVariable ["GameStop", false, true];
 missionNamespace setVariable ["EndEx", true, true];
+missionNamespace setVariable ["EndOp", true, true];
 };
 if (hasInterface) then {
 _EndExPos = mapGridPosition EndExPos;

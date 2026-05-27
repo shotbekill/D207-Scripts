@@ -18,9 +18,9 @@ D207_EOD = ["ACE_Clacker","ACE_M26_Clacker","ACE_DefusalKit","rhsusf_m112_mag","
 D207_ENGLVL1 = ["ACE_rope3","ACE_rope6","ACE_rope36","ACE_rope27","ACE_rope18","ACE_rope15","ACE_rope12","ToolKit"];
 D207_Drones = ["GX_DEPLOYABLE_MAGAZINE_UAV_01","GX_DEPLOYABLE_MAGAZINE_UAV_06","GX_UAVBattery","GX_DEPLOYABLE_MAGAZINE_UAV_06_MEDICAL","GX_DEPLOYABLE_MAGAZINE_BLACKHORNET_UAV","GX_DEPLOYABLE_MAGAZINE_HONEYBADGER_UGV_AT_BLACK","GX_DEPLOYABLE_MAGAZINE_HMG_01","GX_DEPLOYABLE_MAGAZINE_RQ11B_UAV","GX_DEPLOYABLE_MAGAZINE_HONEYBADGER_UGV_AT_DESERT","GX_DEPLOYABLE_MAGAZINE_UAV_06_ANTIMINE","GX_DEPLOYABLE_MAGAZINE_HONEYBADGER_UGV_AT_GREEN","GX_DEPLOYABLE_MAGAZINE_HONEYBADGER_UGV_AT_HEX","GX_DEPLOYABLE_MAGAZINE_STATIC_DESIGNATOR_WOODLAND","GX_DEPLOYABLE_MAGAZINE_STATIC_DESIGNATOR_DESERT","GX_DEPLOYABLE_MAGAZINE_UGV_02_DEMINING"];
 D207_VehicleListPlatoon = ["adfrc_bushmaster_pws127mm_F","ADFRC_ASLAV_PC_RWS_GWOT","rhsusf_mrzr4_d","NDS_6x6_ATV_MIL_EMPTY","rhsusf_m966_d","adfrc_bushmaster_unarmed_command_F","adfrc_bushmaster_unarmed_mev_F","rhsusf_M1078A1P2_B_M2_D_fmtv_usarmy","rhsusf_M1232_M2_usarmy_d","ACV"];
-D207_VehicleListFoxtrot = ["ADFRC_hemtt_flatbed","rhsusf_M1239_M2_socom_d","rhsusf_M1084A1R_SOV_M2_D_fmtv_socom","rhsusf_stryker_m1132_m2_d","rhsusf_m109d_usarmy","RHS_M119_D","I_LT_01_AT_F","I_LT_01_cannon_F","I_LT_01_AA_F","ACV_30","ADFRC_ASLAV","I_APC_Wheeled_03_cannon_F","RHS_M2A3_BUSKIII_wd","RHS_M6_wd","B_AFV_Wheeled_01_up_cannon_F","rhsusf_m1a2sep2wd_usarmy"];
+D207_VehicleListFoxtrot = ["ADFRC_hemtt_flatbed","rhsusf_M1239_M2_socom_d","rhsusf_M1084A1R_SOV_M2_D_fmtv_socom","rhsusf_stryker_m1132_m2_d","rhsusf_m109d_usarmy","RHS_M119_D","I_LT_01_AT_F","I_LT_01_cannon_F","I_LT_01_AA_F","ACV_30","ADFRC_ASLAV","I_APC_Wheeled_03_cannon_F","RHS_M2A3_BUSKIII_wd","RHS_M6_wd","B_AFV_Wheeled_01_up_cannon_F","rhsusf_m1a2sep2wd_usarmy","B_Truck_01_medical_F"];
 D207_VehicleListHawkeye = ["vtx_MH60M","vtx_MH60M_DAP_MLASS","RHS_MELB_AH6M","RHS_MELB_MH6M","adfrc_apache","B_Heli_Attack_01_dynamicLoadout_F","B_Heli_Attack_01_pylons_dynamicLoadout_F","RHS_CH_47F","RHS_CH_47F_cargo","B_Plane_Fighter_01_F","B_Plane_Fighter_01_Stealth_F","B_Plane_CAS_01_dynamicLoadout_F","RHS_C130J","RHS_C130J_Cargo"];
-D207_VehicleListDrone = ["GX_B_HONEYBADGER_UGV_AT_BLACK","B_UAV_01_F","B_UGV_01_rcws_F","GX_B_MQ8B_UAV_RECON_SEATED","GX_B_MQ8B_UAV_RECON","GX_B_MQ8B_UAV_ARMED","B_T_UAV_03_dynamicLoadout_F","B_UAV_02_dynamicLoadout_F","B_UAV_05_F"];
+D207_VehicleListDrone = ["GX_B_THEMIS_UGV_CARGO","GX_B_HONEYBADGER_UGV_AT_BLACK","B_UAV_01_F","B_UGV_01_rcws_F","GX_B_MQ8B_UAV_RECON_SEATED","GX_B_MQ8B_UAV_RECON","GX_B_MQ8B_UAV_ARMED","B_T_UAV_03_dynamicLoadout_F","B_UAV_02_dynamicLoadout_F","B_UAV_05_F","GX_B_THEMIS_UGV_HUNTER_LAUNCHER"];
 // MAC UNF's
 // D207_TestClass = ["tfb_g3_mc_w","tfb_g3_mc_g_w","tfb_g3_mc_np_w","tfb_g3_mc_np_g_w","tfb_g3_mc_r1_w","tfb_g3_mc_r1_g_w","tfb_g3_mc_r1_g_s_w","tfb_g3_mc_r1_np_s_w","tfb_g3_mc_r1_np_w","tfb_g3_mc_r1_np_g_w","tfb_g3_mc_r1_np_g_s_w","tfb_g3_mc_r2_w","tfb_g3_mc_r2_g_w","tfb_g3_mc_r2_g_s_w","tfb_g3_mc_r2_np_w","tfb_g3_mc_r2_np_s_w","tfb_g3_mc_r2_np_g_w","tfb_g3_mc_r2_np_g_s_w","TFB_JPC_Assaulter_13_152A","TFB_JPC_Assaulter_13_152A_NB","TFB_JPC_Assaulter_10_148","TFB_JPC_Assaulter_10_148_NB","TFB_JPC_Comms_2_Dual_2","TFB_JPC_Comms_2_Dual_2_NB","TFB_JPC_Weapons_6_MPU5","TFB_JPC_Weapons_6_MPU5_NB","TFB_JPC_Weapons_2_148","TFB_JPC_Weapons_2_148_NB","JPC2_Pack_2","JPC2_PANEL_2","delta_mc","B_Fennec_Bag_Trizip_1_F","TFB_FTHS1","TFB_FTHS2","TFB_FTHS3","TFB_FTHS4","TFB_FTHS5","TFB_FTHS6","TFB_FTHS7","TFB_FTHS8","TFB_XP1","TFB_XP2","TFB_XP3","TFB_XP4","TFB_XP5","TFB_XP7","TFB_XP6","TFB_XP8","TACDEVRON_AVON_PAPR_CLEAR","TACDEVRON_AVON_CTC_CLEAR","TACDEVRON_AVON_PAPR_SHADED","TACDEVRON_AVON_CTC_SHADED","TACDEVRON_GATORZ_CLEAR","TACDEVRON_GATORZ_SHADED","TACDEVRON_MFRAME_BLACK_CLEAR","TACDEVRON_MFRAME_BLACK_SHADED","TACDEVRON_MFRAME_TAN_CLEAR","TACDEVRON_MFRAME_TAN_SHADED","TC_G_NitrileGloves_1","CAG_NVG_quadoff1","TC_NVG_NitrileGloves_1","TFB_PSQ36_FTHS","TFB_GPNVG_FTHS","TFB_GPNVG_XP","TFB_PSQ36_XP","avs_1000_S","avs_1000_NS"];
 
@@ -77,6 +77,9 @@ missionNamespace setVariable ["LoadIn", false, true];
 missionNamespace setVariable ["Gameon", false, true];
 missionNamespace setVariable ["GameStop", false, true];
 missionNamespace setVariable ["EndEx", false, true];
+missionNamespace setVariable ["EndOp", false, true];
+missionNamespace setVariable ["SpawnRelocator", false, true];
+missionNamespace setVariable ["Relocator", nil, true];
 
 publicVariable "D207_guns";
 publicVariable "D207_Handgun";
@@ -103,4 +106,4 @@ publicVariable "D207_VehicleListPlatoon";
 publicVariable "D207_VehicleListFoxtrot";
 publicVariable "D207_VehicleListHawkeye";
 publicVariable "D207_VehicleListDrone";
-missionNamespace setVariable ["D207_ServerConfig", "11-05-26", true];
+missionNamespace setVariable ["D207_ServerConfig", "27-05-26", true];

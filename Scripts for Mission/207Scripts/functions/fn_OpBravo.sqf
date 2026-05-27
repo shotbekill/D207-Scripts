@@ -30,6 +30,7 @@ _Box3itemlist = [
 	["HandGrenade", 15],
 	["rhs_mag_mk84", 20],
 	["rhs_mag_smaw_HEAA", 6],
+	["rhsusf_mag_40Rnd_46x30_AP", 5],
 	["rhs_weap_M136", 5],
 	["rhs_weap_m72a7", 5],
 	["rhsusf_mag_40Rnd_46x30_FMJ", 5]

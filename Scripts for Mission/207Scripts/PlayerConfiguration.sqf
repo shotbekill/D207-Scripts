@@ -15,8 +15,8 @@ addMissionEventHandler ["EntityCreated", {
 	};
 }];
 
-[["LandVehicle"], ["Convoy Net","Air Net","HQ Net","Medic Net"]] call mor_fnc_vehicleSatCom;
-[["Air"], ["Convoy Net","Air Net","HQ Net","Medic Net"]] call mor_fnc_vehicleSatCom;
+[["LandVehicle"], ["Convoy Net","Air Net","HQ Net","Medic Net","CAS Net"]] call mor_fnc_vehicleSatCom;
+[["Air"], ["Convoy Net","Air Net","HQ Net","Medic Net","CAS Net"]] call mor_fnc_vehicleSatCom;
 
 ["207 Modules", "Load In", {missionNamespace setVariable ["LoadIn", true, true];}] call zen_custom_modules_fnc_register;
 ["207 Modules", "Game on", {missionNamespace setVariable ["Gameon", true, true];}] call zen_custom_modules_fnc_register;
@@ -24,7 +24,7 @@ addMissionEventHandler ["EntityCreated", {
 ["207 Modules", "endex", {[_this select 0] call D207_fnc_EndExPos;}] call zen_custom_modules_fnc_register;
 ["207 Modules", "Add J5 Spectator", {_this select 1 addEventHandler ["Respawn", {remoteExec ["D207_fnc_Spectator", _this select 1];}];remoteExec ["D207_fnc_Spectator",_this select 1];}] call zen_custom_modules_fnc_register;
 ["207 Modules", "Spawn Logi Box", {_Box = "B_Slingload_01_Cargo_F" createVehicle (_this select 0);[_Box] spawn D207_fnc_MoveLogisticalBox;}] call zen_custom_modules_fnc_register;
-["207 Modules", "End Op", {if (EndEx) then {remoteExec ["D207_fnc_EndOp", 2];} else {hint "End Op not called"};}] call zen_custom_modules_fnc_register;
+["207 Modules", "End Op", {if (EndEx) then {if (EndOp) then {remoteExec ["D207_fnc_EndOp", 2];} else {hint "EndOp Has Been Called"};} else {hint "EndEx Not Called"};}] call zen_custom_modules_fnc_register;
 ["207 Logistical", "Berets", {[_this select 0] call D207_fnc_berets;}] call zen_custom_modules_fnc_register;
 ["207 Logistical", "Arsenal", {[_this select 0] call D207_fnc_Arsenal;}] call zen_custom_modules_fnc_register;
 ["207 Logistical", "Respawn Mover", {[_this select 0] call D207_fnc_Makerespawn;}] call zen_custom_modules_fnc_register;
@@ -72,4 +72,4 @@ publicVariable "D207_VehicleListDrone";
 _hinttext = parseText format ["%1 Added to the Drone Vehicle Spawner", _Vehtoaddtpye];
 hint _hinttext;
 }] call zen_custom_modules_fnc_register;
-player setVariable ["D207_PlayerConfig", "11-05-26", false];
+player setVariable ["D207_PlayerConfig", "27-05-26", false];

@@ -24,6 +24,7 @@ if (hasInterface) then {
 	[_Arsenalbox, D207_EOD,true] call ace_arsenal_fnc_addVirtualItems;
 	[_Arsenalbox, D207_ENGLVL1,true] call ace_arsenal_fnc_addVirtualItems;
 	[_Arsenalbox, D207_Drones,true] call ace_arsenal_fnc_addVirtualItems;
+	// [_Arsenalbox, D207_TestClass,true] call ace_arsenal_fnc_addVirtualItems;
 	__Arsenalupdate = ["Core1", "<t color='#9204c9'>Update Arsenal</t>","",{[_this select 0] spawn D207_fnc_UpdateArsenalitems;}, {true}, {}, [_Arsenalbox]] call ace_interact_menu_fnc_createAction;
 	[_Arsenalbox, 0, ["ACE_MainActions"], __Arsenalupdate]  call ace_interact_menu_fnc_addActionToObject;
 };

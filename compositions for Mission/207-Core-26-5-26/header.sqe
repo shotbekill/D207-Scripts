@@ -1,5 +1,5 @@
 version=54;
-name="207-Core-23-4-26";
+name="207-Core-26-5-26";
 author="shot_be_kill";
 category="ace_main_subcategory";
 requiredAddons[]=
@@ -11,6 +11,9 @@ requiredAddons[]=
 	"A3_Structures_F_Mil_BagFence",
 	"A3_Ui_F",
 	"Pugs_Map_Colours",
+	"A3_Structures_F_Civ_Camping",
+	"ace_dragging",
+	"A3_Structures_F_EPC_Items_Electronics",
 	"A3_Structures_F_Tank_Military_RepairDepot",
 	"A3_Structures_F_Bootcamp_VR_Helpers",
 	"A3_Characters_F"
