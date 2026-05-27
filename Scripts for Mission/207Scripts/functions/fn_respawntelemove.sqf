@@ -1,24 +1,14 @@
 params [["_vehicle", objNull, [objNull]]];
-
 if (isNull _vehicle) exitWith {
     systemChat "Spawn Relocator failed: no target object found.";
 };
-
 if (missionNamespace getVariable ["SpawnRelocator", false]) exitWith {
     systemChat "There Is A Relocator Setup, Pack Other Relocator To Setup A New One";
 };
-
 systemChat "Setting up Spawn Relocator, This will take some time";
-
 _vehicle allowDamage false;
 _vehicle enableSimulation false;
-
 missionNamespace setVariable ["SpawnRelocator", true, true];
-
-
-// ================================================================
-// Snap object to ground/surface
-// ================================================================
 private _fnc_snapObjectToSurface = {
     params [
         ["_obj", objNull, [objNull]],
@@ -61,11 +51,6 @@ private _fnc_snapObjectToSurface = {
         _obj setVectorUp _surfaceNormal;
     };
 };
-
-
-// ================================================================
-// Spawn object on ground, then snap it correctly
-// ================================================================
 private _fnc_spawnGroundObject = {
     params [
         ["_anchor", objNull, [objNull]],
@@ -92,69 +77,54 @@ private _fnc_spawnGroundObject = {
 
     _obj
 };
-
-
+systemChat "Unpacking Object 1/17, HBarrier 1/12.";
 sleep 3;
-
-
-// ================================================================
-// Spawn Relocator Objects
-// ================================================================
-
 [_vehicle, "Land_HBarrier_5_F", [-0.75, 6.25, 0], 0] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 2/17, HBarrier 2/12.";
 sleep 6;
-
 [_vehicle, "Land_HBarrier_5_F", [2.75, 4.25, 0], 90] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 3/17, HBarrier 3/12.";
 sleep 6;
-
 [_vehicle, "Land_HBarrier_5_F", [2.75, -1.5, 0], 90] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 4/17, HBarrier 4/12.";
 sleep 6;
-
 [_vehicle, "Land_HBarrier_5_F", [2.75, -7.25, 0], 90] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 5/17, HBarrier 5/12.";
 sleep 6;
-
 [_vehicle, "Land_HBarrier_5_F", [2.75, -13, 0], 90] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 6/17, HBarrier 6/12.";
 sleep 6;
-
 [_vehicle, "Land_HBarrier_3_F", [1.75, -16.5, 0], 0] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 7/17, HBarrier 7/12.";
 sleep 6;
-
-[_vehicle, "Land_SandbagBarricade_01_F", [-4.5, -16.75, 0], 180] call _fnc_spawnGroundObject;
-sleep 6;
-
 [_vehicle, "Land_HBarrier_3_F", [-11, -16.5, 0], 0] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 8/17, HBarrier 8/12.";
 sleep 6;
-
 [_vehicle, "Land_HBarrier_5_F", [-12, -13, 0], 90] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 9/17, HBarrier 9/12.";
 sleep 6;
 
 [_vehicle, "Land_HBarrier_5_F", [-12, -7.25, 0], 90] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 10/17, HBarrier 10/12.";
 sleep 6;
-
 [_vehicle, "Land_HBarrier_5_F", [-12, -1.5, 0], 90] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 11/17, HBarrier 11/12.";
 sleep 6;
-
 [_vehicle, "Land_HBarrier_5_F", [-12, 4.25, 0], 90] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 12/17, HBarrier 12/12.";
 sleep 6;
-
 [_vehicle, "Land_HBarrier_5_F", [-8.5, 6.25, 0], 0] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 13/17, Sandbag 1/1.";
 sleep 6;
-
+[_vehicle, "Land_SandbagBarricade_01_F", [-4.5, -16.75, 0], 180] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 14/17, Medical Tent 1/1.";
+sleep 6;
 [_vehicle, "Land_MedicalTent_01_MTP_closed_F", [-4.5, -11.75, 0], 0] call _fnc_spawnGroundObject;
+systemChat "Unpacking Object 15/17, Table 1/1.";
 sleep 6;
-
-
-// ================================================================
-// Table and laptop
-// ================================================================
-
 private _CampingTableOB = [_vehicle, "Land_CampingTable_small_F", [-3, 4.75, 0], 180] call _fnc_spawnGroundObject;
-sleep 5;
-
-/*
-    Do NOT snap this one to ground.
-    It is being spawned on TOP of the table.
-*/
+systemChat "Unpacking Object 16/17, Laptop 1/1.";
+sleep 2;
 private _Laptop = [
     [_CampingTableOB, "TOP"],
     "Land_Laptop_device_F",
@@ -164,14 +134,7 @@ private _Laptop = [
     {0},
     false
 ] call BIS_fnc_spawnObjects;
-
 private _LaptopOB = _Laptop select 0;
-
-
-// ================================================================
-// ACE Actions
-// ================================================================
-
 private _RelocatorLapTop = [
     "RelocatorLapTop",
     "<t color='#207207'>Relocator LapTop</t>",
@@ -183,10 +146,7 @@ private _RelocatorLapTop = [
     [0, 0, 0],
     7
 ] call ace_interact_menu_fnc_createAction;
-
-[_LaptopOB, 0, [], _RelocatorLapTop] call ace_interact_menu_fnc_addActionToObject;
-
-
+[_LaptopOB, 0, [], _RelocatorLapTop] remoteExec ["ace_interact_menu_fnc_addActionToObject", 0, true];
 private _Ping = [
     "Ping",
     "<t color='#00FFEA'>Ping For Reinsertion</t>",
@@ -194,10 +154,7 @@ private _Ping = [
     {[] spawn D207_fnc_Reinsertionping;},
     {true}
 ] call ace_interact_menu_fnc_createAction;
-
-[_LaptopOB, 0, ["RelocatorLapTop"], _Ping] call ace_interact_menu_fnc_addActionToObject;
-
-
+[_LaptopOB, 0, ["RelocatorLapTop"], _Ping] remoteExec ["ace_interact_menu_fnc_addActionToObject", 0, true];
 private _Heal = [
     "HealBase",
     "<t color='#00FF00'>Heal</t>",
@@ -205,24 +162,14 @@ private _Heal = [
     {player setDamage 0;},
     {true}
 ] call ace_interact_menu_fnc_createAction;
-
-[_LaptopOB, 0, ["RelocatorLapTop"], _Heal] call ace_interact_menu_fnc_addActionToObject;
-
-
+[_LaptopOB, 0, ["RelocatorLapTop"], _Heal] remoteExec ["ace_interact_menu_fnc_addActionToObject", 0, true];
+systemChat "Unpacking Object 17/17, Helipad 1/1.";
 sleep 5;
-
-
-// ================================================================
-// Helipad and hidden selector
-// ================================================================
-
 [_vehicle, "Land_HelipadRescue_F", [-4.5, 15.5, 0], 0] call _fnc_spawnGroundObject;
 sleep 3;
-
+systemChat "Finishing Setup Of Relocator.";
 private _3DSelector = [_vehicle, "VR_3DSelector_01_exit_F", [-4.5, -4.75, 0], 0] call _fnc_spawnGroundObject;
-sleep 1;
+sleep 2;
 [_3DSelector, true] remoteExec ["hideObjectGlobal", 2];
-
 missionNamespace setVariable ["Relocator", _3DSelector, true];
-
 systemChat "Spawn Relocator has been setup";
