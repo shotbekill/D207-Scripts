@@ -47,7 +47,6 @@ class D207
 		class MoveLogisticalBox {};
 		class Moverespawnnow {};
 		class NameUAV {};
-		class NameUAVCheck {};
 		class NVG {};
 		class OpAlpha {};
 		class OpBravo {};

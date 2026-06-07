@@ -2,18 +2,33 @@
 player addEventHandler ["Killed", { player setVariable ["SBK_DeathLoadout", getUnitLoadout player]; }];
 player addEventHandler ["Respawn", { private _loadout = player getVariable "SBK_DeathLoadout"; if (!isNil "_loadout") then { player setUnitLoadout _loadout; }; player enableStamina false;}];
 
-addMissionEventHandler ["EntityCreated", {
-	params ["_entity"];
-	if (unitIsUAV _entity) then {
-	if (isNil "D207UAVCHECKVEH") then {D207UAVCHECKVEH = 1;} else {D207UAVCHECKVEH = D207UAVCHECKVEH + 1;};
-	publicVariable "D207UAVCHECKVEH";
-	_D207UAVCHECKVEH = D207UAVCHECKVEH;
-	_D207UAVCHECKTFadd = _D207UAVCHECKVEH;
-	_D207UAVCHECKTF = format ["D207UAVCHECKTF_%1",_D207UAVCHECKTFadd];
-	missionNamespace setVariable [_D207UAVCHECKTF, false, true];
-	[[_entity,_D207UAVCHECKTF]] remoteExec ["D207_fnc_NameUAV", -2];
+[] spawn {
+	waitUntil { !isNull player };
+
+	private _lastConnectedUAV = objNull;
+
+	while { true } do {
+		uiSleep 1;
+
+		private _connectedUAV = getConnectedUAV player;
+
+		// Player has connected to a UAV, or changed to a different UAV
+		if (
+			!isNull _connectedUAV &&
+			{ unitIsUAV _connectedUAV } &&
+			{ _connectedUAV != _lastConnectedUAV }
+		) then {
+			[_connectedUAV, player] remoteExecCall ["D207_fnc_NameUAV", 2];
+		};
+
+		// Reset when player disconnects from UAV
+		if (isNull _connectedUAV) then {
+			_lastConnectedUAV = objNull;
+		} else {
+			_lastConnectedUAV = _connectedUAV;
+		};
 	};
-}];
+};
 
 [["LandVehicle"], ["Convoy Net","Air Net","HQ Net","Medic Net","CAS Net"]] call mor_fnc_vehicleSatCom;
 [["Air"], ["Convoy Net","Air Net","HQ Net","Medic Net","CAS Net"]] call mor_fnc_vehicleSatCom;
