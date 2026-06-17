@@ -1,5 +1,5 @@
 version=54;
-center[]={5722.9243,5,3690.3521};
+center[]={5722.8877,5,3690.3533};
 class items
 {
 	items=1;
@@ -22,7 +22,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-1.9243164,0.89242268,-0.35205078};
+							position[]={-1.8876953,0.89242268,-0.35327148};
 							angles[]={-0,4.712389,0};
 						};
 						side="Empty";
@@ -56,7 +56,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-3.9243164,0.89242268,-0.35205078};
+							position[]={-3.8876953,0.89242268,-0.35327148};
 							angles[]={-0,4.712389,0};
 						};
 						side="Empty";
@@ -90,7 +90,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-5.9243164,0.89242268,-0.35205078};
+							position[]={-5.8876953,0.89242268,-0.35327148};
 							angles[]={-0,4.712389,0};
 						};
 						side="Empty";
@@ -124,7 +124,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-7.9243164,0.89242268,-0.35205078};
+							position[]={-7.8876953,0.89242268,-0.35327148};
 							angles[]={-0,4.712389,0};
 						};
 						side="Empty";
@@ -158,7 +158,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-5.9243164,0,0.64794922};
+							position[]={-5.8876953,0,0.64672852};
 						};
 						title="Arsenals";
 						id=6664;
@@ -168,7 +168,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-9.9243164,0.89242268,-0.35205078};
+							position[]={-9.8876953,0.89242268,-0.35327148};
 							angles[]={-0,4.712389,0};
 						};
 						side="Empty";
@@ -212,7 +212,7 @@ class items
 						dataType="Logic";
 						class PositionInfo
 						{
-							position[]={-9.9243164,0,4.6479492};
+							position[]={-9.8876953,0,4.6467285};
 							angles[]={-0,1.672893,0};
 						};
 						id=5879;
@@ -223,7 +223,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-9.9243164,0,3.6479492};
+							position[]={-9.8876953,0,3.6467285};
 							angles[]={-0,5.4691525,0};
 						};
 						title="Lets zeus track Radio Comms";
@@ -234,7 +234,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-10.174316,0,1.6479492};
+							position[]={-10.137695,0,1.6467285};
 							angles[]={-0,5.4691525,0};
 						};
 						title="Turns on Fortify tools for the Server";
@@ -245,7 +245,7 @@ class items
 						dataType="Logic";
 						class PositionInfo
 						{
-							position[]={-7.9243164,0,1.6479492};
+							position[]={-7.8876953,0,1.6467285};
 							angles[]={-0,1.6728981,0};
 						};
 						id=5881;
@@ -312,7 +312,7 @@ class items
 						dataType="Logic";
 						class PositionInfo
 						{
-							position[]={-6.9243164,0,1.6479492};
+							position[]={-6.8876953,0,1.6467285};
 							angles[]={-0,1.6728981,0};
 						};
 						id=5882;
@@ -379,7 +379,7 @@ class items
 						dataType="Logic";
 						class PositionInfo
 						{
-							position[]={-8.9243164,0,1.6479492};
+							position[]={-8.8876953,0,1.6467285};
 							angles[]={-0,1.6728981,0};
 						};
 						id=5880;
@@ -456,7 +456,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={1.0756836,0.41931152,-2.1020508};
+							position[]={1.1123047,0.41931152,-2.1032715};
 						};
 						side="Empty";
 						flags=4;
@@ -472,7 +472,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-0.42431641,0.41931152,-0.60205078};
+							position[]={-0.38769531,0.41931152,-0.60327148};
 							angles[]={-0,1.5707967,0};
 						};
 						side="Empty";
@@ -489,7 +489,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={5.5756836,0.41931152,2.3979492};
+							position[]={5.6123047,0.41931152,2.3967285};
 							angles[]={-0,4.712389,0};
 						};
 						side="Empty";
@@ -506,7 +506,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-0.42431641,0.41931152,2.3979492};
+							position[]={-0.38769531,0.41931152,2.3967285};
 							angles[]={-0,1.5707963,0};
 						};
 						side="Empty";
@@ -523,7 +523,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={4.0756836,0.41931152,-2.1020508};
+							position[]={4.1123047,0.41931152,-2.1032715};
 							angles[]={-0,2.3841858e-07,0};
 						};
 						side="Empty";
@@ -540,7 +540,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={5.5756836,0.41931152,-0.60205078};
+							position[]={5.6123047,0.41931152,-0.60327148};
 							angles[]={-0,4.7472959,0};
 						};
 						side="Empty";
@@ -555,7 +555,7 @@ class items
 					class Item6
 					{
 						dataType="Marker";
-						position[]={2.5756836,0,0.14794922};
+						position[]={2.6123047,0,0.14672852};
 						name="respawn";
 						type="Empty";
 						angle=0.33999312;
@@ -566,7 +566,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={2.5756836,0,1.6479492};
+							position[]={2.6123047,0,1.6467285};
 						};
 						title="There is a Maker here that HAS to be moved with the sandbags!";
 						id=5870;
@@ -576,7 +576,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={5.0756836,0.40520144,5.1479492};
+							position[]={5.1123047,0.40520144,5.1467285};
 							angles[]={-0,3.141593,0};
 						};
 						side="Empty";
@@ -610,13 +610,13 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={5.0756836,0.96907234,5.1479492};
+							position[]={5.1123047,0.96907234,5.1467285};
 							angles[]={0,3.9269907,0};
 						};
 						side="Empty";
 						class Attributes
 						{
-							init="_Respawn = [""Respawn"", ""<t color='#207207'>Respawn LapTop</t>"","""",{nil}, {true}, {}, [], [0, 0, 0], 7] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [], _Respawn]  call ace_interact_menu_fnc_addActionToObject; " \n "_Ping = [""Ping"", ""<t color='#00FFEA'>Ping For Reinsertion</t>"","""",{[] spawn D207_fnc_Reinsertionping;}, {true}] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [""Respawn""], _Ping]  call ace_interact_menu_fnc_addActionToObject; " \n "_Heal = [""HealBase"", ""<t color='#00FF00'>Heal</t>"","""",{player setDamage 0;}, {true}] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [""Respawn""], _Heal]  call ace_interact_menu_fnc_addActionToObject; " \n "_MoveToRelocator = [""MoveToRelocator"", ""<t color='#ff0000'>Move To Spawn Relocator</t>"","""",{Player setPos (getPos Relocator);}, {missionNamespace getVariable ""SpawnRelocator"" && !isNil ""Relocator""}] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [""Respawn""], _MoveToRelocator]  call ace_interact_menu_fnc_addActionToObject;";
+							init="_Respawn = [""Respawn"", ""<t color='#207207'>Respawn LapTop</t>"","""",{nil}, {true}, {}, [], [0, 0, 0], 7] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [], _Respawn]  call ace_interact_menu_fnc_addActionToObject; " \n "_Ping = [""Ping"", ""<t color='#00FFEA'>Ping For Reinsertion</t>"","""",{[] spawn D207_fnc_Reinsertionping;}, {true}] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [""Respawn""], _Ping]  call ace_interact_menu_fnc_addActionToObject; " \n "_Heal = [""HealBase"", ""<t color='#00FF00'>Heal</t>"","""",{[objNull, player] call ace_medical_treatment_fnc_fullHeal;}, {true}] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [""Respawn""], _Heal]  call ace_interact_menu_fnc_addActionToObject; " \n "_MoveToFOB = [""MoveToFOB"", ""<t color='#ff0000'>Move To FOB</t>"","""",{Player setPos (getPos FOBTELE);}, {!isNil ""FOBTELE""}] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [""Respawn""], _MoveToFOB]  call ace_interact_menu_fnc_addActionToObject; " \n "_MoveToRelocator = [""MoveToRelocator"", ""<t color='#ff0000'>Move To Spawn Relocator</t>"","""",{Player setPos (getPos Relocator);}, {missionNamespace getVariable ""SpawnRelocator"" && !isNil ""Relocator""}] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [""Respawn""], _MoveToRelocator]  call ace_interact_menu_fnc_addActionToObject;";
 							disableSimulation=1;
 						};
 						id=18718;
@@ -654,7 +654,7 @@ class items
 					class Item0
 					{
 						dataType="Trigger";
-						position[]={-8.1743164,0,4.6479492};
+						position[]={-8.1376953,0,4.6467285};
 						class Attributes
 						{
 							condition="missionNamespace getVariable ""LoadIn"";";
@@ -670,7 +670,7 @@ class items
 					class Item1
 					{
 						dataType="Trigger";
-						position[]={-6.1743164,0,4.6479492};
+						position[]={-6.1376953,0,4.6467285};
 						class Attributes
 						{
 							condition="missionNamespace getVariable ""Gameon"";";
@@ -686,7 +686,7 @@ class items
 					class Item2
 					{
 						dataType="Trigger";
-						position[]={-4.1743164,0,4.6479492};
+						position[]={-4.1376953,0,4.6467285};
 						class Attributes
 						{
 							condition="missionNamespace getVariable ""GameStop"";";
@@ -702,7 +702,7 @@ class items
 					class Item3
 					{
 						dataType="Trigger";
-						position[]={-2.1743164,0,4.6479492};
+						position[]={-2.1376953,0,4.6467285};
 						class Attributes
 						{
 							condition="missionNamespace getVariable ""endex"";";
@@ -720,7 +720,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-6.1743164,0,3.6479492};
+							position[]={-6.1376953,0,3.6467285};
 						};
 						title="This is the Gameon trigger";
 						id=5854;
@@ -730,7 +730,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-4.1743164,0,3.6479492};
+							position[]={-4.1376953,0,3.6467285};
 						};
 						title="This is the GameStop trigger";
 						id=5857;
@@ -740,7 +740,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-8.1743164,0,3.6479492};
+							position[]={-8.1376953,0,3.6467285};
 						};
 						title="This is the LoadIn trigger";
 						id=5855;
@@ -750,7 +750,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-2.1743164,0,3.6479492};
+							position[]={-2.1376953,0,3.6467285};
 						};
 						title="This is the endex trigger";
 						id=5858;
@@ -770,7 +770,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={9.5756836,0,-1.3520508};
+							position[]={9.6123047,0,-1.3532715};
 							angles[]={-0,1.4592981,0};
 						};
 						title="Hawkeye Logi";
@@ -781,7 +781,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={16.575684,0,-1.3520508};
+							position[]={16.612305,0,-1.3532715};
 							angles[]={-0,2.3269246,0};
 						};
 						title="foxtrot logi";
@@ -792,7 +792,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={9.8256836,2.4179983,1.8979492};
+							position[]={9.8623047,2.4179983,1.8967285};
 							angles[]={0,3.1415925,-0};
 						};
 						side="Empty";
@@ -810,7 +810,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={15.075684,2.4179983,-6.1020508};
+							position[]={15.112305,2.4179983,-6.1032715};
 							angles[]={0,4.712389,-0};
 						};
 						side="Empty";
@@ -828,7 +828,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={-4.9243164,0.00050020218,-6.1020508};
+							position[]={-4.8876953,0.00050020218,-6.1032715};
 							angles[]={0,1.5707965,-0};
 						};
 						side="Empty";
@@ -845,7 +845,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={11.825684,0,-5.8520508};
+							position[]={11.862305,0,-5.8532715};
 							angles[]={-0,1.5707965,0};
 						};
 						title="Vehicle Spawner";
@@ -856,7 +856,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-5.6743164,0,-6.1020508};
+							position[]={-5.6376953,0,-6.1032715};
 							angles[]={-0,1.5707965,0};
 						};
 						title="The helper can be deleted if need But the Helpers Presence is set to false so it won't spawn in mission";
@@ -867,7 +867,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={-4.1743164,0,-6.1020508};
+							position[]={-4.1376953,0,-6.1032715};
 							angles[]={-0,1.5707965,0};
 						};
 						title="Vehicle's will Spawn here (20M away from the Vehicle Spawner it self)";
@@ -878,7 +878,7 @@ class items
 						dataType="Object";
 						class PositionInfo
 						{
-							position[]={16.825684,2.4179983,1.8979492};
+							position[]={16.862305,2.4179983,1.8967285};
 							angles[]={-0,3.1415925,0};
 						};
 						side="Empty";
@@ -906,7 +906,7 @@ class items
 						dataType="Logic";
 						class PositionInfo
 						{
-							position[]={1.0756836,0,-4.3520508};
+							position[]={1.1123047,0,-4.3532715};
 						};
 						name="The_Imbalancer_Of_Zero";
 						isPlayable=1;
@@ -918,7 +918,7 @@ class items
 						dataType="Logic";
 						class PositionInfo
 						{
-							position[]={5.0756836,0,-4.3520508};
+							position[]={5.1123047,0,-4.3532715};
 						};
 						name="The_Man_Of_Candy";
 						isPlayable=1;
@@ -930,7 +930,7 @@ class items
 						dataType="Logic";
 						class PositionInfo
 						{
-							position[]={9.0756836,0,-4.3520508};
+							position[]={9.1123047,0,-4.3532715};
 						};
 						name="The_Van_Of_Party";
 						isPlayable=1;
@@ -942,7 +942,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={1.0756836,0,-5.3520508};
+							position[]={1.1123047,0,-5.3532715};
 						};
 						title="HeadLess Client 1";
 						id=5867;
@@ -952,7 +952,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={5.0756836,0,-5.3520508};
+							position[]={5.1123047,0,-5.3532715};
 						};
 						title="HeadLess Client 2";
 						id=5868;
@@ -962,7 +962,7 @@ class items
 						dataType="Comment";
 						class PositionInfo
 						{
-							position[]={9.0756836,0,-5.3520508};
+							position[]={9.1123047,0,-5.3532715};
 						};
 						title="HeadLess Client 3";
 						id=5869;
