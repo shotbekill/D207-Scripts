@@ -159,7 +159,7 @@ private _Heal = [
     "HealBase",
     "<t color='#00FF00'>Heal</t>",
     "",
-    {player setDamage 0;},
+    {[objNull, player] call ace_medical_treatment_fnc_fullHeal;},
     {true}
 ] call ace_interact_menu_fnc_createAction;
 [_LaptopOB, 0, ["RelocatorLapTop"], _Heal] remoteExec ["ace_interact_menu_fnc_addActionToObject", 0, true];

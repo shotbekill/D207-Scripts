@@ -100,15 +100,7 @@ clearWeaponCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 clearItemCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
-// H60 texture setup
-if (_vehicle isKindOf "vtx_H60_base") then {
-	_vehicle setObjectTextureGlobal [16, "asd207_hawkeye_textures\data\textures\d207_australia\asd207_main_co.paa"];
-	_vehicle setObjectTextureGlobal [17, "asd207_hawkeye_textures\data\textures\d207_australia\asd207_misc_co.paa"];
-	_vehicle setObjectTextureGlobal [18, "asd207_hawkeye_textures\data\textures\d207_australia\asd207_tail_co.paa"];
-	_vehicle setObjectTextureGlobal [19, "hue_additions_h60-skins-and-markings\markings\207.paa"];
-	_vehicle animateSource ["Fuelprobe_Show", 0, true];
-	_vehicle animateSource ["Cockpitdoors_Hide", 0, true];
-};
+
 // Medical respawn mover setup
 if (_vehicle isKindOf "B_Truck_01_medical_F") then {
 	[_vehicle] remoteExec ["D207_fnc_respawntele", 0, true];
@@ -117,3 +109,42 @@ sleep 0.5;
 private _displayName = getText (configFile >> "CfgVehicles" >> _info >> "displayName");
 private _chat = format ["You have spawned a %1", _displayName];
 systemChat _chat;
+
+_vehicle setVariable [
+    "D207_spawnOwnerUID",
+    getPlayerUID player,
+    true
+];
+
+_vehicle setVariable [
+    "D207_vehicleEditorUsed",
+    false,
+    true
+];
+
+[_vehicle] spawn {
+    params ["_vehicle"];
+
+    // Give the vehicle and mission display time to initialise.
+    uiSleep 0.25;
+
+    if (isNull _vehicle) exitWith {};
+
+    private _openEditor = [
+        "Would you like to edit the vehicle's appearance?<br/><br/>This is your only opportunity to edit it.",
+        "Vehicle Editor",
+        true,
+        true
+    ] call BIS_fnc_guiMessage;
+
+    if (_openEditor) then {
+        [_vehicle] call D207_fnc_openVehicleEditor;
+    } else {
+        // Choosing No also consumes the one-time editing opportunity.
+        _vehicle setVariable [
+            "D207_vehicleEditorUsed",
+            true,
+            true
+        ];
+    };
+};

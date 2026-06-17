@@ -28,7 +28,8 @@ _Box3itemlist = [
 	["DemoCharge_Remote_Mag", 10],
 	["SatchelCharge_Remote_Mag", 5],
 	["HandGrenade", 20],
- 	["rhs_mag_mk84", 20]
+ 	["rhs_mag_mk84", 20],
+	["rhsusf_20Rnd_762x51_SR25_m993_Mag",10]
 ];
 _BoxOBJs = [];
 _boxtypeA = 0;

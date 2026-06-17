@@ -42,7 +42,7 @@ player addEventHandler ["Respawn", { private _loadout = player getVariable "SBK_
 ["207 Modules", "End Op", {if (EndEx) then {if (EndOp) then {remoteExec ["D207_fnc_EndOp", 2];} else {hint "EndOp Has Been Called"};} else {hint "EndEx Not Called"};}] call zen_custom_modules_fnc_register;
 ["207 Logistical", "Berets", {[_this select 0] call D207_fnc_berets;}] call zen_custom_modules_fnc_register;
 ["207 Logistical", "Arsenal", {[_this select 0] call D207_fnc_Arsenal;}] call zen_custom_modules_fnc_register;
-["207 Logistical", "Respawn Mover", {[_this select 0] call D207_fnc_Makerespawn;}] call zen_custom_modules_fnc_register;
+["207 Logistical", "FOB Respawn", {[_this select 0] call D207_fnc_FOBspawn;}] call zen_custom_modules_fnc_register;
 ["207 Logistical", "Full Resupply Vehicle", {[_this select 0] Spawn D207_fnc_FullResupply;}] call zen_custom_modules_fnc_register;
 ["207 Logistical", "Box of Keys", {[_this select 0] call D207_fnc_Keys;}] call zen_custom_modules_fnc_register;
 ["207 Logistical", "Check Scripts", {[_this select 0] call D207_fnc_Checkmission;}] call zen_custom_modules_fnc_register;
