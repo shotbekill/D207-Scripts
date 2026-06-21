@@ -26,6 +26,7 @@ _Box2itemlist = [
 	["rhs_mag_M433_HEDP", 30],
 	["rhs_mag_mk84", 10],
 	["rhs_mag_m67", 10],
+	["ACE_30Rnd_556x45_Stanag_M995_AP_mag",15],
 	["GX_1RND_DRONE40_RECON_M203", 5]
 ];
 _Box3itemlist = [

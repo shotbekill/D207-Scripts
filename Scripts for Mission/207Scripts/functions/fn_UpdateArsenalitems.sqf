@@ -8,7 +8,7 @@ if (hasInterface) then {
 	[_Arsenalbox, [],true] call ace_arsenal_fnc_initBox;
 	[_Arsenalbox, D207_guns,true] call ace_arsenal_fnc_addVirtualItems;
 	[_Arsenalbox, D207_Handgun,true] call ace_arsenal_fnc_addVirtualItems;
-	[_Arsenalbox, D207_lunchers,true] call ace_arsenal_fnc_addVirtualItems;
+	[_Arsenalbox, D207_Launchers,true] call ace_arsenal_fnc_addVirtualItems;
 	[_Arsenalbox, D207_unf,true] call ace_arsenal_fnc_addVirtualItems;
 	[_Arsenalbox, D207_Vests,true] call ace_arsenal_fnc_addVirtualItems;
 	[_Arsenalbox, D207_Backpacks,true] call ace_arsenal_fnc_addVirtualItems;
