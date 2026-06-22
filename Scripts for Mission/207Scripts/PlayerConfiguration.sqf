@@ -47,7 +47,13 @@ player addEventHandler ["Respawn", { private _loadout = player getVariable "SBK_
 ["207 Logistical", "Box of Keys", {[_this select 0] call D207_fnc_Keys;}] call zen_custom_modules_fnc_register;
 ["207 Logistical", "Check Scripts", {[_this select 0] call D207_fnc_Checkmission;}] call zen_custom_modules_fnc_register;
 
-["207 Vehicle Spawner", "Can Spawn Vehicle", {createDialog "CanSpawnVehicle";D207_CanSpawnCode = 0; D207_CanSpawnBool = 0; execVM '207Scripts\Vehiclespawner\CanSpawnCode.sqf';}] call zen_custom_modules_fnc_register;
+["207 Vehicle Spawner", "Spawn Vehicle Spawner Box", {
+_Box = "Land_RepairDepot_01_civ_F" createVehicle (_this select 0);
+[_Box,"207Scripts\VehicleSpawnBoxScript.sqf"] remoteExec ["execVM", 0, true];
+_Box allowDamage false;
+_Box enableSimulation false;
+}] call zen_custom_modules_fnc_register;
+["207 Vehicle Spawner", "Can Spawn Vehicle", {createDialog "CanSpawnVehicle";D207_CanSpawnCode = 1; execVM '207Scripts\Vehiclespawner\CanSpawnCode.sqf';}] call zen_custom_modules_fnc_register;
 ["207 Vehicle Spawner", "Add Vehicle To Platoon Spawner", {
 _Vehtoadd = _this select 1;
 _Vehtoaddtpye = typeOf _Vehtoadd;

@@ -10,6 +10,8 @@ private _index = lbCurSel _ctrl;
 if (_index < 0) exitWith {
 	hint "No vehicle selected.";
 };
+private _ctrlChecked = _display displayCtrl 2800;
+private _openEditor = cbChecked _ctrlChecked;
 private _info = _ctrl lbData _index;
 closeDialog 1;
 // Vehicle restriction checks
@@ -62,8 +64,20 @@ private _vehiclesInSpawn = nearestObjects [
 	} forEach crew _oldVehicle;
 	sleep 0.1;
 	deleteVehicle _oldVehicle;
+	if ((typeOf _oldVehicle) in _platoonList) then {_Tickets = missionNamespace getVariable "D207_PlatoonTickets";_SetTickets = _Tickets + 1;missionNamespace setVariable ["D207_PlatoonTickets", _SetTickets, true];};
+	if ((typeOf _oldVehicle) in _foxtrotList) then {_Tickets = missionNamespace getVariable "D207_FoxtrotTickets";_SetTickets = _Tickets + 1;missionNamespace setVariable ["D207_FoxtrotTickets", _SetTickets, true];};
+	if ((typeOf _oldVehicle) in _hawkeyeList) then {_Tickets = missionNamespace getVariable "D207_HawkeyeTickets";_SetTickets = _Tickets + 1;missionNamespace setVariable ["D207_HawkeyeTickets", _SetTickets, true];};
+	if ((typeOf _oldVehicle) in _droneList) then {_Tickets = missionNamespace getVariable "D207_DroneTickets";_SetTickets = _Tickets + 1;missionNamespace setVariable ["D207_DroneTickets", _SetTickets, true];};
 } forEach _vehiclesInSpawn;
 sleep 0.5;
+_TicketsPlatoon = missionNamespace getVariable "D207_PlatoonTickets";
+_TicketsFoxtrot = missionNamespace getVariable "D207_FoxtrotTickets";
+_TicketsHawkeye = missionNamespace getVariable "D207_HawkeyeTickets";
+_TicketsDrone = missionNamespace getVariable "D207_DroneTickets";
+if ((_TicketsPlatoon <= 0) && (_info in _platoonList)) exitWith {hint "You Have no more Tickets to spawn Platoon Vehicles";};
+if ((_TicketsFoxtrot <= 0) && (_info in _foxtrotList)) exitWith {hint "You Have no more Tickets to spawn Foxtrot Vehicles";};
+if ((_TicketsHawkeye <= 0) && (_info in _hawkeyeList)) exitWith {hint "You Have no more Tickets to spawn Hawkeye Vehicles";};
+if ((_TicketsDrone <= 0) && (_info in _droneList)) exitWith {hint "You Have no more Tickets to spawn Drone Vehicles";};
 // Check if the spawn point is over water
 private _isWater = surfaceIsWater _checkPosition;
 private _spawnPosition = [];
@@ -109,42 +123,35 @@ sleep 0.5;
 private _displayName = getText (configFile >> "CfgVehicles" >> _info >> "displayName");
 private _chat = format ["You have spawned a %1", _displayName];
 systemChat _chat;
-
-_vehicle setVariable [
-    "D207_spawnOwnerUID",
-    getPlayerUID player,
-    true
-];
-
-_vehicle setVariable [
-    "D207_vehicleEditorUsed",
-    false,
-    true
-];
-
-[_vehicle] spawn {
-    params ["_vehicle"];
-
+[_vehicle,_openEditor] spawn {
+    params ["_vehicle","_openEditor"];
+	test1 = _vehicle;
+	test2 = _openEditor;
     // Give the vehicle and mission display time to initialise.
     uiSleep 0.25;
-
     if (isNull _vehicle) exitWith {};
-
-    private _openEditor = [
-        "Would you like to edit the vehicle's appearance?<br/><br/>This is your only opportunity to edit it.",
-        "Vehicle Editor",
-        true,
-        true
-    ] call BIS_fnc_guiMessage;
 
     if (_openEditor) then {
         [_vehicle] call D207_fnc_openVehicleEditor;
-    } else {
-        // Choosing No also consumes the one-time editing opportunity.
-        _vehicle setVariable [
-            "D207_vehicleEditorUsed",
-            true,
-            true
-        ];
     };
+};
+if (_info in _platoonList) exitWith {
+	_Tickets = missionNamespace getVariable "D207_PlatoonTickets";
+	_SetTickets = _Tickets - 1;
+	missionNamespace setVariable ["D207_PlatoonTickets", _SetTickets, true];
+};
+if (_info in _foxtrotList) exitWith {
+	_Tickets = missionNamespace getVariable "D207_FoxtrotTickets";
+	_SetTickets = _Tickets - 1;
+	missionNamespace setVariable ["D207_FoxtrotTickets", _SetTickets, true];
+};
+if (_info in _hawkeyeList) exitWith {
+	_Tickets = missionNamespace getVariable "D207_HawkeyeTickets";
+	_SetTickets = _Tickets - 1;
+	missionNamespace setVariable ["D207_HawkeyeTickets", _SetTickets, true];
+};
+if (_info in _droneList) exitWith {
+	_Tickets = missionNamespace getVariable "D207_DroneTickets";
+	_SetTickets = _Tickets - 1;
+	missionNamespace setVariable ["D207_DroneTickets", _SetTickets, true];
 };

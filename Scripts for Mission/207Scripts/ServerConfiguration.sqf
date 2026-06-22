@@ -80,6 +80,10 @@ missionNamespace setVariable ["EndEx", false, true];
 missionNamespace setVariable ["EndOp", false, true];
 missionNamespace setVariable ["SpawnRelocator", false, true];
 missionNamespace setVariable ["Relocator", nil, true];
+missionNamespace setVariable ["D207_PlatoonTickets", 500, true];
+missionNamespace setVariable ["D207_FoxtrotTickets", 500, true];
+missionNamespace setVariable ["D207_HawkeyeTickets", 500, true];
+missionNamespace setVariable ["D207_DroneTickets", 500, true];
 
 publicVariable "D207_guns";
 publicVariable "D207_Handgun";
