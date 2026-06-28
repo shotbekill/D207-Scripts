@@ -34,36 +34,6 @@ if !(
 
 
 // -------------------------------------------------------------------------
-// Confirm this player spawned the vehicle
-// -------------------------------------------------------------------------
-
-private _ownerUID = _vehicle getVariable [
-    "D207_spawnOwnerUID",
-    ""
-];
-
-if (_ownerUID isNotEqualTo getPlayerUID player) exitWith {
-    hint "You did not spawn this vehicle.";
-};
-
-
-// -------------------------------------------------------------------------
-// Prevent the editor being opened again
-// -------------------------------------------------------------------------
-
-if (_vehicle getVariable ["D207_vehicleEditorUsed", false]) exitWith {
-    hint "The editing opportunity for this vehicle has expired.";
-};
-
-// Mark it as used before opening the editor.
-_vehicle setVariable [
-    "D207_vehicleEditorUsed",
-    true,
-    true
-];
-
-
-// -------------------------------------------------------------------------
 // Check Zeus Enhanced
 // -------------------------------------------------------------------------
 
