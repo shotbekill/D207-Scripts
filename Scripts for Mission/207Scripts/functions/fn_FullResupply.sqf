@@ -1,8 +1,13 @@
 params ["_BoxPos"];
 hint "Making full resupply + Vehicle";
-_flatbed = "ADFRC_hemtt_flatbed" createVehicle _BoxPos;
+//_flatbed = "ADFRC_hemtt_flatbed" createVehicle _BoxPos;
+_flatbed = "rhsusf_M1084A1R_SOV_M2_D_fmtv_socom" createVehicle _BoxPos;
 
-for "_i" from 0 to 2 do {
+_Tracks = "BL_Case_D207_Tracks" createVehicle _BoxPos;
+[_flatbed,_Tracks] call boxloader_fnc_load;
+_Wheels = "BL_Case_D207_Wheels" createVehicle _BoxPos;
+[_flatbed,_Wheels] call boxloader_fnc_load;
+
 _BaseboxBigpawn = [[_flatbed, "TOP"], "BL_Crate_D207_OpDem", 1, [0,5,0], (0),{0},false] call BIS_fnc_spawnObjects;
 _BaseboxBig = _BaseboxBigpawn select 0;
 [_BaseboxBig, 20] call ace_cargo_fnc_setSpace;
@@ -19,7 +24,6 @@ waitUntil {scriptDone _Resupply5};
 _BaseboxBig allowDamage false;
 _BaseboxBig enableSimulation true;
 [_flatbed,_BaseboxBig] call boxloader_fnc_load;
-};
 
 _Ammobox = "Boxloader_SmallPallet_Ammo" createVehicle _BoxPos;
 [_Ammobox, 5000] remoteExec ["ace_rearm_fnc_makeSource", 2];
@@ -27,20 +31,8 @@ _Ammobox = "Boxloader_SmallPallet_Ammo" createVehicle _BoxPos;
 _Ammobox setVariable ["ace_isRepairFacility", 1, true];
 [_flatbed,_Ammobox] call boxloader_fnc_load;
 
-_boxBig = "Land_Boxloader_Crate_1" createVehicle _BoxPos;
-[_boxBig, 16] call ace_cargo_fnc_setSpace;
-_boxname = "Land_Boxloader_Case_Tan" createVehicle _BoxPos;
-[_boxname, 10] call ace_cargo_fnc_setSpace;
-for "_x" from 0 to 9 do {
-_wheel = "ACE_Wheel" createVehicle _BoxPos;
-[_wheel, _boxname, true] call ace_cargo_fnc_loadItem;
-};
-[_boxname, _boxBig, true] call ace_cargo_fnc_loadItem;
-[_boxBig] spawn D207_fnc_PlatHQfull;
-[_boxBig] spawn D207_fnc_Ghost;
-sleep 1;
-[_flatbed,_boxBig] call boxloader_fnc_load;
-
+_fueltank = "FlexibleTank_01_forest_F" createVehicle _BoxPos;
+[_flatbed,_fueltank] call boxloader_fnc_load;
 _fueltank = "FlexibleTank_01_forest_F" createVehicle _BoxPos;
 [_flatbed,_fueltank] call boxloader_fnc_load;
 _fueltank = "FlexibleTank_01_forest_F" createVehicle _BoxPos;

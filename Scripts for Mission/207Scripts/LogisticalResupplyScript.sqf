@@ -128,7 +128,7 @@ _Wheel = ["Wheel", "Box of Wheels","",{"BL_Case_D207_Wheels" createVehicle posit
 _Fuel = ["Fuel", "Big Fuel Tank","",{player spawn D207_fnc_FuelL;}, {true}] call ace_interact_menu_fnc_createAction;
 [_box, 0, ["D207", "Core2", "Core22"], _Fuel]  call ace_interact_menu_fnc_addActionToObject;
 
-_Vicmover = ["Vicmover", "Vehicle Packer","",{_packerbox = "BL_Crate_D207_VPacker" createVehicle position player;[_packerbox] remoteExec ["D207_fnc_vicmovemake", 0];}, {true}] call ace_interact_menu_fnc_createAction;
+_Vicmover = ["Vicmover", "Vehicle Packer","",{["CREATE", player] remoteExecCall ["D207_fnc_vicmovemake",2];}, {true}] call ace_interact_menu_fnc_createAction;
 [_box, 0, ["D207", "Core2", "Core22"], _Vicmover]  call ace_interact_menu_fnc_addActionToObject;
 
 _Statics = ["Core23", "<t color='#8d3a00'>Statics</t>","",{nil}, {true}] call ace_interact_menu_fnc_createAction;

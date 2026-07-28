@@ -54,12 +54,11 @@ class D207
 		class openVehicleEditor {};
 		class OpPHQ {};
 		class OpReaper {};
+		class Outro {};
 		class Reinsertionping {};
-		class respawntele {};
-		class respawnteleFOB {};
-		class respawntelecheck {};
-		class respawnteleMove {};
-		class respawntelePack {};
+		class Relocator {};
+		class RelocatorFOB {};
+		class RelocatorLaptop {};
 		class Spectator {};
 		class StaticsAA {};
 		class StaticsBox {};
@@ -73,8 +72,13 @@ class D207
 		class UnPackLogisticalBox {};
 		class UpdateArsenalitems {};
 		class vicmove {};
-		class vicmoveAir {};
 		class vicmovemake {};
+		class ClaimUAV {};
+		class RequestUAVClaim {};
+		class RespawnPing {};
+		class SetUAVOwner {};
+		class UAVHint {};
+		class teleport {};
 	};
 };
 class MOR

@@ -17,8 +17,7 @@ _Box2itemlist = [
 ];
 _Box3itemlist = [
 	["GX_1RND_DRONE40_RECON_M203", 5],
-	["KAR_100Rnd_Fury", 10],
-	["ADFRC_250Rnd_556_Minimi_TR", 10],
+	["ADFRC_250Rnd_556_Minimi_TR", 20],
 	["ACE_HuntIR_M203", 10],
 	["ACE_IR_Strobe_Item", 10],
 	["rhs_mag_M433_HEDP", 40],

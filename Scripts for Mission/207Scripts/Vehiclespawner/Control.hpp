@@ -7,7 +7,6 @@ class VehicleSpawnerStart
 		class baseFrame: IGUIBack
 		{
 			idc = 2200;
-
 			x = 0.438605 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
 			w = 0.107442 * safezoneW;
@@ -572,3 +571,124 @@ class CanSpawnVehicle
 		};
 	};
 };
+
+class IntroOutro
+{
+	idd = 8300;
+	
+	class controls
+	{
+		class BackGround: IGUIBack
+		{
+			idc = 2200;
+			x = 16.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 9 * GUI_GRID_W;
+			h = 9 * GUI_GRID_H;
+			colorBackground[] = {0,0,0,0.5};
+		};
+		class IntroBox: RscCheckbox
+		{
+			idc = 2800;
+			x = 17 * GUI_GRID_W + GUI_GRID_X;
+			y = 8 * GUI_GRID_H + GUI_GRID_Y;
+			w = 1.5 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H;
+			style = 0;
+			textureChecked ="\A3\ui_f\data\map\diary\icons\tasksucceeded_ca.paa";
+			textureUnchecked = "\A3\ui_f\data\map\diary\icons\taskfailed_ca.paa";
+			textureFocusedChecked = "\A3\ui_f\data\map\diary\icons\tasksucceeded_ca.paa";
+			textureFocusedUnchecked = "\A3\ui_f\data\map\diary\icons\taskfailed_ca.paa";
+			textureHoverChecked = "\A3\ui_f\data\map\diary\icons\tasksucceeded_ca.paa";
+			textureHoverUnchecked = "\A3\ui_f\data\map\diary\icons\taskfailed_ca.paa";
+			texturePressedChecked = "\A3\ui_f\data\map\diary\icons\tasksucceeded_ca.paa";
+			texturePressedUnchecked = "\A3\ui_f\data\map\diary\icons\taskfailed_ca.paa";
+			textureDisabledChecked = "\A3\ui_f\data\map\diary\icons\tasksucceeded_ca.paa";
+			textureDisabledUnchecked = "\A3\ui_f\data\map\diary\icons\taskfailed_ca.paa";
+			// White prevents the control from changing the texture colours
+			color[] = {1,1,1,1};
+			colorFocused[] = {1,1,1,1};
+			colorHover[] = {1,1,1,1};
+			colorPressed[] = {1,1,1,1};
+			colorDisabled[] = {1,1,1,0.5};
+		};
+		class OutroBox: IntroBox
+		{
+			idc = 2801;
+			x = 17 * GUI_GRID_W + GUI_GRID_X;
+			y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
+		};
+		class SoundBox: IntroBox
+		{
+			idc = 2802;
+			x = 17 * GUI_GRID_W + GUI_GRID_X;
+			y = 11 * GUI_GRID_H + GUI_GRID_Y;
+		};
+		class SaveButton: RscButton
+		{
+			idc = 1600;
+			action = "execVM '207Scripts\Vehiclespawner\IntroOutro.sqf';";
+			text = "Save";
+			x = 17 * GUI_GRID_W + GUI_GRID_X;
+			y = 12.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 3.5 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H;
+		};
+		class CancelButton: RscButton
+		{
+			idc = 1601;
+			action = "closeDialog 2;";
+			text = "Cancel";
+			x = 21.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 12.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 3.5 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H;
+		};
+		class Intro: RscText
+		{
+			idc = 1000;
+			text = "Intro";
+			x = 19 * GUI_GRID_W + GUI_GRID_X;
+			y = 8 * GUI_GRID_H + GUI_GRID_Y;
+			w = 3.5 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H;
+		};
+		class OptIntoText1: RscText
+		{
+			idc = 1001;
+			text = "Opt Into/Outof the";
+			x = 17.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 7 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H;
+		};
+		class OptIntoText2: RscText
+		{
+			idc = 1002;
+			text = "Intro and Outro + Sound";
+			x = 16.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 6.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 9 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H;
+		};
+		class Outro: RscText
+		{
+			idc = 1003;
+			text = "Outro";
+			x = 19 * GUI_GRID_W + GUI_GRID_X;
+			y = 9.5 * GUI_GRID_H + GUI_GRID_Y;
+			w = 3.5 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H;
+		};
+		class Sound: RscText
+		{
+			idc = 1004;
+			text = "Sound";
+			x = 19 * GUI_GRID_W + GUI_GRID_X;
+			y = 11 * GUI_GRID_H + GUI_GRID_Y;
+			w = 3.5 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H;
+		};
+	};
+};
+

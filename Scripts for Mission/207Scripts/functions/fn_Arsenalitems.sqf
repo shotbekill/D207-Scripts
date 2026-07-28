@@ -25,8 +25,21 @@ if (hasInterface) then {
 	[_Arsenalbox, D207_ENGLVL1,true] call ace_arsenal_fnc_addVirtualItems;
 	[_Arsenalbox, D207_Drones,true] call ace_arsenal_fnc_addVirtualItems;
 	// [_Arsenalbox, D207_TestClass,true] call ace_arsenal_fnc_addVirtualItems;
-	__Arsenalupdate = ["Core1", "<t color='#9204c9'>Update Arsenal</t>","",{[_this select 0] spawn D207_fnc_UpdateArsenalitems;}, {true}, {}, [_Arsenalbox]] call ace_interact_menu_fnc_createAction;
-	[_Arsenalbox, 0, ["ACE_MainActions"], __Arsenalupdate]  call ace_interact_menu_fnc_addActionToObject;
+	_Arsenalupdate = ["Core1", "<t color='#9204c9'>Update Arsenal</t>","",{[_this select 0] spawn D207_fnc_UpdateArsenalitems;}, {true}, {}, [_Arsenalbox]] call ace_interact_menu_fnc_createAction;
+	[_Arsenalbox, 0, ["ACE_MainActions"], _Arsenalupdate]  call ace_interact_menu_fnc_addActionToObject;
+	_IntroOutroAction = ["Core1", "<t color='#9DA600'>Intro Outro settings</t>","",{
+		createDialog "IntroOutro";
+		_ctrlIntro = (findDisplay 8300) displayCtrl 2800;
+		_ctrlOutro = (findDisplay 8300) displayCtrl 2801;
+		_ctrlSound = (findDisplay 8300) displayCtrl 2802;
+		_Intro = profileNamespace getVariable "D207_Op_Intro";
+		_Outro = profileNamespace getVariable "D207_Op_Outro";
+		_Sound = profileNamespace getVariable "D207_Op_Sound";
+		_ctrlIntro cbSetChecked _Intro;
+		_ctrlOutro cbSetChecked _Outro;
+		_ctrlSound cbSetChecked _Sound;
+	}, {true}, {}, [_Arsenalbox]] call ace_interact_menu_fnc_createAction;
+	[_Arsenalbox, 0, ["ACE_MainActions"], _IntroOutroAction]  call ace_interact_menu_fnc_addActionToObject;
 };
 /*
 	if ([player,1] call ace_common_fnc_isMedic) then {[_Arsenalbox, D207_Medlvl1,true] call ace_arsenal_fnc_addVirtualItems;};

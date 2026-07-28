@@ -616,7 +616,7 @@ class items
 						side="Empty";
 						class Attributes
 						{
-							init="_Respawn = [""Respawn"", ""<t color='#207207'>Respawn LapTop</t>"","""",{nil}, {true}, {}, [], [0, 0, 0], 7] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [], _Respawn]  call ace_interact_menu_fnc_addActionToObject; " \n "_Ping = [""Ping"", ""<t color='#00FFEA'>Ping For Reinsertion</t>"","""",{[] spawn D207_fnc_Reinsertionping;}, {true}] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [""Respawn""], _Ping]  call ace_interact_menu_fnc_addActionToObject; " \n "_Heal = [""HealBase"", ""<t color='#00FF00'>Heal</t>"","""",{[objNull, player] call ace_medical_treatment_fnc_fullHeal;}, {true}] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [""Respawn""], _Heal]  call ace_interact_menu_fnc_addActionToObject; " \n "_MoveToFOB = [""MoveToFOB"", ""<t color='#ff0000'>Move To FOB</t>"","""",{Player setPos (getPos FOBTELE);}, {!isNil ""FOBTELE""}] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [""Respawn""], _MoveToFOB]  call ace_interact_menu_fnc_addActionToObject; " \n "_MoveToRelocator = [""MoveToRelocator"", ""<t color='#ff0000'>Move To Spawn Relocator</t>"","""",{Player setPos (getPos Relocator);}, {missionNamespace getVariable ""SpawnRelocator"" && !isNil ""Relocator""}] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [""Respawn""], _MoveToRelocator]  call ace_interact_menu_fnc_addActionToObject;";
+							init="[""CREATE"", this] spawn D207_fnc_RelocatorLaptop;";
 							disableSimulation=1;
 						};
 						id=18718;
@@ -817,7 +817,7 @@ class items
 						flags=5;
 						class Attributes
 						{
-							init="_D207 = [""D207"", ""<t color='#207207'>Vehicle Spawner</t>"","""",{[_target] execVM ""207Scripts\Vehiclespawner\StartDialog.sqf""}, {true}, {}, [], [0, 0, -1], 7] call ace_interact_menu_fnc_createAction; " \n "[this, 0, [], _D207]  call ace_interact_menu_fnc_addActionToObject;";
+							init="this execVM ""207Scripts\VehicleSpawnBoxScript.sqf"";";
 							disableSimulation=1;
 						};
 						id=13974;

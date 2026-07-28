@@ -117,23 +117,21 @@ clearBackpackCargoGlobal _vehicle;
 
 // Medical respawn mover setup
 if (_vehicle isKindOf "B_Truck_01_medical_F") then {
-	[_vehicle] remoteExec ["D207_fnc_respawntele", 0, true];
+	["CREATE", _vehicle] remoteExec ["D207_fnc_Relocator", 0, true];
 };
 sleep 0.5;
 private _displayName = getText (configFile >> "CfgVehicles" >> _info >> "displayName");
 private _chat = format ["You have spawned a %1", _displayName];
 systemChat _chat;
 [_vehicle,_openEditor] spawn {
-    params ["_vehicle","_openEditor"];
-	test1 = _vehicle;
-	test2 = _openEditor;
-    // Give the vehicle and mission display time to initialise.
-    uiSleep 0.25;
-    if (isNull _vehicle) exitWith {};
+	params ["_vehicle","_openEditor"];
+	// Give the vehicle and mission display time to initialise.
+	uiSleep 0.25;
+	if (isNull _vehicle) exitWith {};
 
-    if (_openEditor) then {
-        [_vehicle] call D207_fnc_openVehicleEditor;
-    };
+	if (_openEditor) then {
+		[_vehicle] call D207_fnc_openVehicleEditor;
+	};
 };
 if (_info in _platoonList) exitWith {
 	_Tickets = missionNamespace getVariable "D207_PlatoonTickets";
