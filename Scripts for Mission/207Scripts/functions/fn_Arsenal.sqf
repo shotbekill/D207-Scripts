@@ -1,8 +1,8 @@
-params ["_BoxPos"];
-_Arsenalbox = "B_supplyCrate_F" createVehicle _BoxPos;
-clearItemCargoGlobal _Arsenalbox;
-clearMagazineCargoGlobal _Arsenalbox;
-clearBackpackCargoGlobal _Arsenalbox;
-clearWeaponCargoGlobal _Arsenalbox;
-
-[_Arsenalbox] remoteExec ["D207_fnc_Arsenalitems", 0];
+params [["_boxPos", [], [[]]]];
+if (_boxPos isEqualTo []) exitWith {};
+private _arsenalBox = "B_supplyCrate_F" createVehicle _boxPos;
+clearItemCargoGlobal _arsenalBox;
+clearMagazineCargoGlobal _arsenalBox;
+clearBackpackCargoGlobal _arsenalBox;
+clearWeaponCargoGlobal _arsenalBox;
+[_arsenalBox] remoteExec ["D207_fnc_Arsenalitems", -2, _arsenalBox];

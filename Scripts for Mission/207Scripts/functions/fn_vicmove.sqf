@@ -27,6 +27,9 @@ _nearestVehicles = _nearestVehicles select {alive _x && {_x != _packerbox} && {t
 private _victopack = _nearestVehicles param [0,objNull];
 if (isNull _victopack) exitWith {_packerbox setVariable ["D207_packBusy",false,true];[format ["No %1 within %2 metres to pack.",_vehicleDescription,_searchDistance]] call _sendMessage;};
 if (abs speed _victopack > 1) exitWith {_packerbox setVariable ["D207_packBusy",false,true];[format ["The %1 must be stationary.",_vehicleDescription]] call _sendMessage;};
+if (crew _victopack isNotEqualTo []) exitWith {_packerbox setVariable ["D207_packBusy",false,true];["Everyone must exit the vehicle before it can be packed."] call _sendMessage;};
+if (!isNull (attachedTo _victopack)) exitWith {_packerbox setVariable ["D207_packBusy",false,true];["Detach the vehicle before packing it."] call _sendMessage;};
+if (!isNull (isVehicleCargo _victopack)) exitWith {_packerbox setVariable ["D207_packBusy",false,true];["Unload the vehicle from its carrier before packing it."] call _sendMessage;};
 // Save the vehicle's original location before doing anything to it.
 private _originalPosition = getPosATL _victopack;
 private _originalDirection = getDir _victopack;
@@ -51,6 +54,20 @@ while {_attachedQueue isNotEqualTo []} do {
 		_cargoCarriers pushBack _attachedObject;
 		_attachedQueue append (attachedObjects _attachedObject);
 	};
+};
+// The packing operation uses locality-sensitive commands. Empty vehicles and
+// BoxLoader helper objects can safely be transferred back to the server first.
+{
+	if (!local _x) then {_x setOwner 2;};
+} forEach _cargoCarriers;
+private _localityTimeout = diag_tickTime + 2;
+waitUntil {
+	sleep 0.05;
+	({_x isNotEqualTo objNull && {!local _x}} count _cargoCarriers) isEqualTo 0 || {diag_tickTime >= _localityTimeout}
+};
+if (({!isNull _x && {!local _x}} count _cargoCarriers) > 0) exitWith {
+	_packerbox setVariable ["D207_packBusy",false,true];
+	["The server could not take ownership of the vehicle. Try again after everyone has exited it."] call _sendMessage;
 };
 /*
 	Unload all BoxLoader / ViV cargo before moving

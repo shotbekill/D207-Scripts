@@ -61,4 +61,4 @@ _fortifylist = [
 [independent, 5000, _fortifylist] call ace_fortify_fnc_registerObjects;
 };
 
-if (missionNamespace getVariable "Startup" != true) then {missionNamespace setVariable ["Startup", true, true];};
+if !(missionNamespace getVariable ["Startup", false]) then {missionNamespace setVariable ["Startup", true, true];};

@@ -1,17 +1,13 @@
 params [["_type", 0, [0]]];
-
-if (_type == 1) then {
-	call BIS_fnc_VRFadeOut;
-	sleep 1;
-	Player setPos (getPos FOBTELE);
-	sleep 1;
-	call BIS_fnc_VRFadeIn;
+if (!hasInterface) exitWith {};
+private _destination = switch (_type) do {
+    case 1: {missionNamespace getVariable ["FOBTELE", objNull]};
+    case 2: {missionNamespace getVariable ["Relocator", objNull]};
+    default {objNull};
 };
-
-if (_type == 2) then {
-	call BIS_fnc_VRFadeOut;
-	sleep 1;
-	Player setPos (getPos Relocator);
-	sleep 1;
-	call BIS_fnc_VRFadeIn;
-};
+if (isNull _destination) exitWith {hint "Teleport destination is not available.";};
+call BIS_fnc_VRFadeOut;
+uiSleep 1;
+player setPos (getPos _destination);
+uiSleep 1;
+call BIS_fnc_VRFadeIn;

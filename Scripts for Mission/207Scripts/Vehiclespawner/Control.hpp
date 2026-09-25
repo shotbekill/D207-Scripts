@@ -97,7 +97,7 @@ class VehicleSpawnerStart
 		};
 		class EditVehicle: RscButton
 		{
-			idc = 1607;
+			idc = 1608;
 			action = "execVM '207Scripts\Vehiclespawner\EditVehicle.sqf';";
 			text = "Edit Vehicle"; //--- ToDo: Localize;
 			x = 0.442442 * safezoneW + safezoneX;
@@ -201,7 +201,7 @@ class VehicleSpawner
 		};
 		class Spawnable: RscButton
 		{
-			idc = 1601;
+			idc = 1603;
 			action = "execVM '207Scripts\Vehiclespawner\canSpawn.sqf';";
 			text = "Spawnable?"; //--- ToDo: Localize;
 			x = 20.5 * GUI_GRID_W + GUI_GRID_X;
@@ -211,7 +211,7 @@ class VehicleSpawner
 		};
 		class ButtonCancel: RscButton
 		{
-			idc = 1601;
+			idc = 1604;
 			action = "closeDialog 2;";
 			text = "Cancel"; //--- ToDo: Localize;
 			x = 26 * GUI_GRID_W + GUI_GRID_X;
@@ -386,7 +386,7 @@ class CanSpawnVehicle
 		
 		class Platoonspawnable: RscText
 		{
-			idc = 1000;
+			idc = 1010;
 			text = "spawnable?"; //--- ToDo: Localize;
 			x = 14 * GUI_GRID_W + GUI_GRID_X;
 			y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -404,7 +404,7 @@ class CanSpawnVehicle
 		};
 		class PlatoonTicketsTXT: RscText
 		{
-			idc = 1000;
+			idc = 1011;
 			text = "Tickets"; //--- ToDo: Localize;
 			x = 14.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -413,7 +413,7 @@ class CanSpawnVehicle
 		};
 		class PlatoonSetTickets: RscButton
 		{
-			idc = 1600;
+			idc = 1611;
 			action = "D207_Tickets = 1; execVM '207Scripts\Vehiclespawner\CanSpawnCode.sqf';";
 			text = "Set"; //--- ToDo: Localize;
 			x = 16.5 * GUI_GRID_W + GUI_GRID_X;
@@ -423,7 +423,7 @@ class CanSpawnVehicle
 		};
 		class Hawkeyespawnable: RscText
 		{
-			idc = 1000;
+			idc = 1012;
 			text = "spawnable?"; //--- ToDo: Localize;
 			x = 14 * GUI_GRID_W + GUI_GRID_X;
 			y = 12 * GUI_GRID_H + GUI_GRID_Y;
@@ -432,7 +432,7 @@ class CanSpawnVehicle
 		};
 		class HawkeyeTicketsTXT: RscText
 		{
-			idc = 1000;
+			idc = 1013;
 			text = "Tickets"; //--- ToDo: Localize;
 			x = 14.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 15 * GUI_GRID_H + GUI_GRID_Y;
@@ -450,7 +450,7 @@ class CanSpawnVehicle
 		};
 		class HawkeyeSetTickets: RscButton
 		{
-			idc = 1600;
+			idc = 1612;
 			action = "D207_Tickets = 3; execVM '207Scripts\Vehiclespawner\CanSpawnCode.sqf';";
 			text = "Set"; //--- ToDo: Localize;
 			x = 16.5 * GUI_GRID_W + GUI_GRID_X;
@@ -460,7 +460,7 @@ class CanSpawnVehicle
 		};
 		class AllSpawnable: RscText
 		{
-			idc = 1000;
+			idc = 1014;
 			text = "All Spawnable"; //--- ToDo: Localize;
 			x = 13.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 19.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -469,7 +469,7 @@ class CanSpawnVehicle
 		};
 		class Foxtrotspawnable: RscText
 		{
-			idc = 1000;
+			idc = 1015;
 			text = "spawnable?"; //--- ToDo: Localize;
 			x = 21.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -478,7 +478,7 @@ class CanSpawnVehicle
 		};
 		class FoxtrotTicketsTXT: RscText
 		{
-			idc = 1000;
+			idc = 1016;
 			text = "Tickets"; //--- ToDo: Localize;
 			x = 22 * GUI_GRID_W + GUI_GRID_X;
 			y = 7.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -496,7 +496,7 @@ class CanSpawnVehicle
 		};
 		class FoxtrotSetTickets: RscButton
 		{
-			idc = 1600;
+			idc = 1613;
 			action = "D207_Tickets = 2; execVM '207Scripts\Vehiclespawner\CanSpawnCode.sqf';";
 			text = "Set"; //--- ToDo: Localize;
 			x = 24 * GUI_GRID_W + GUI_GRID_X;
@@ -506,7 +506,7 @@ class CanSpawnVehicle
 		};
 		class Dronespawnable: RscText
 		{
-			idc = 1000;
+			idc = 1017;
 			text = "spawnable?"; //--- ToDo: Localize;
 			x = 21.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 12 * GUI_GRID_H + GUI_GRID_Y;
@@ -515,7 +515,7 @@ class CanSpawnVehicle
 		};
 		class DroneTicketsTXT: RscText
 		{
-			idc = 1000;
+			idc = 1018;
 			text = "Tickets"; //--- ToDo: Localize;
 			x = 22 * GUI_GRID_W + GUI_GRID_X;
 			y = 15 * GUI_GRID_H + GUI_GRID_Y;
@@ -533,7 +533,7 @@ class CanSpawnVehicle
 		};
 		class DroneSetTickets: RscButton
 		{
-			idc = 1600;
+			idc = 1614;
 			action = "D207_Tickets = 4; execVM '207Scripts\Vehiclespawner\CanSpawnCode.sqf';";
 			text = "Set"; //--- ToDo: Localize;
 			x = 24 * GUI_GRID_W + GUI_GRID_X;
@@ -543,7 +543,7 @@ class CanSpawnVehicle
 		};
 		class AllTicketsTXT: RscText
 		{
-			idc = 1000;
+			idc = 1019;
 			text = "All Tickets"; //--- ToDo: Localize;
 			x = 21.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 19.5 * GUI_GRID_H + GUI_GRID_Y;
@@ -561,7 +561,7 @@ class CanSpawnVehicle
 		};
 		class AllSetTickets: RscButton
 		{
-			idc = 1600;
+			idc = 1615;
 			action = "D207_Tickets = 5; execVM '207Scripts\Vehiclespawner\CanSpawnCode.sqf';";
 			text = "Set"; //--- ToDo: Localize;
 			x = 24 * GUI_GRID_W + GUI_GRID_X;

@@ -1,6 +1,5 @@
-private ["_Arsenalbox"];
-params ["_Arsenalbox"];
-_Arsenalbox = _this select 0;
+params [["_Arsenalbox", objNull, [objNull]]];
+if (isNull _Arsenalbox) exitWith {};
 if (hasInterface) then {
 	[_Arsenalbox, true, false] call ace_arsenal_fnc_removeVirtualItems;
 	hint "Updating Arsenal, Please wait";

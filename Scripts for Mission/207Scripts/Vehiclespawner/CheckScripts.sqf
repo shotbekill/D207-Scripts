@@ -1,3 +1,4 @@
+private ["_backInit","_backMain","_backConfig","_Scriptupdate","_PlayerConfig","_ServerConfig","_PlayerConfigInit","_ServerConfigInit","_PlayerMain","_ServerMain","_init","_Main","_Config","_Backgr","_hinttext1","_hinttext2","_hinttext3","_hinttext5"];
 closeDialog 1;
 
 _backInit = ctrlText 1401;
@@ -5,12 +6,12 @@ _backMain = ctrlText 1402;
 _backConfig = ctrlText 1403;
 
 _Scriptupdate = "27-05-26";
-_PlayerConfig = player getVariable "D207_PlayerConfig";
-_ServerConfig = missionNamespace getVariable "D207_ServerConfig";
-_PlayerConfigInit = player getVariable "D207_PlayerConfigInit";
-_ServerConfigInit = missionNamespace getVariable "D207_ServerConfigInit";
-_PlayerMain = player getVariable "D207_PlayerMain";
-_ServerMain = missionNamespace getVariable "D207_ServerMain";
+_PlayerConfig = player getVariable ["D207_PlayerConfig", "<not set>"];
+_ServerConfig = missionNamespace getVariable ["D207_ServerConfig", "<not set>"];
+_PlayerConfigInit = player getVariable ["D207_PlayerConfigInit", "<not set>"];
+_ServerConfigInit = missionNamespace getVariable ["D207_ServerConfigInit", "<not set>"];
+_PlayerMain = player getVariable ["D207_PlayerMain", "<not set>"];
+_ServerMain = missionNamespace getVariable ["D207_ServerMain", "<not set>"];
 _init = [];
 _Main = [];
 _Config = [];

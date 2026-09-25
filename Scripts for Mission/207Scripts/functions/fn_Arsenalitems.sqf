@@ -1,8 +1,8 @@
-private ["_Arsenalbox"];
-params ["_Arsenalbox"];
-waitUntil {!isNil "Startup"};
+params [["_Arsenalbox", objNull, [objNull]]];
+if (isNull _Arsenalbox) exitWith {};
+if (!hasInterface) exitWith {};
+waitUntil {missionNamespace getVariable ["Startup", false]};
 if (hasInterface) then {
-	waitUntil {missionNamespace getVariable "Startup"};
 	[_Arsenalbox, [],true] call ace_arsenal_fnc_initBox;
 	[_Arsenalbox, D207_guns,true] call ace_arsenal_fnc_addVirtualItems;
 	[_Arsenalbox, D207_Handgun,true] call ace_arsenal_fnc_addVirtualItems;
@@ -25,16 +25,16 @@ if (hasInterface) then {
 	[_Arsenalbox, D207_ENGLVL1,true] call ace_arsenal_fnc_addVirtualItems;
 	[_Arsenalbox, D207_Drones,true] call ace_arsenal_fnc_addVirtualItems;
 	// [_Arsenalbox, D207_TestClass,true] call ace_arsenal_fnc_addVirtualItems;
-	_Arsenalupdate = ["Core1", "<t color='#9204c9'>Update Arsenal</t>","",{[_this select 0] spawn D207_fnc_UpdateArsenalitems;}, {true}, {}, [_Arsenalbox]] call ace_interact_menu_fnc_createAction;
+	private _Arsenalupdate = ["D207_UpdateArsenal", "<t color='#9204c9'>Update Arsenal</t>","",{[_this select 0] spawn D207_fnc_UpdateArsenalitems;}, {true}, {}, [_Arsenalbox]] call ace_interact_menu_fnc_createAction;
 	[_Arsenalbox, 0, ["ACE_MainActions"], _Arsenalupdate]  call ace_interact_menu_fnc_addActionToObject;
-	_IntroOutroAction = ["Core1", "<t color='#9DA600'>Intro Outro settings</t>","",{
+	private _IntroOutroAction = ["D207_IntroOutroSettings", "<t color='#9DA600'>Intro Outro settings</t>","",{
 		createDialog "IntroOutro";
 		_ctrlIntro = (findDisplay 8300) displayCtrl 2800;
 		_ctrlOutro = (findDisplay 8300) displayCtrl 2801;
 		_ctrlSound = (findDisplay 8300) displayCtrl 2802;
-		_Intro = profileNamespace getVariable "D207_Op_Intro";
-		_Outro = profileNamespace getVariable "D207_Op_Outro";
-		_Sound = profileNamespace getVariable "D207_Op_Sound";
+		_Intro = profileNamespace getVariable ["D207_Op_Intro", false];
+		_Outro = profileNamespace getVariable ["D207_Op_Outro", false];
+		_Sound = profileNamespace getVariable ["D207_Op_Sound", false];
 		_ctrlIntro cbSetChecked _Intro;
 		_ctrlOutro cbSetChecked _Outro;
 		_ctrlSound cbSetChecked _Sound;

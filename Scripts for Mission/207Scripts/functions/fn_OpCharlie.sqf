@@ -38,6 +38,8 @@ _Box3itemlist = [
 	["Laserdesignator", 2],
 	["Laserbatteries", 2],
 	["ACE_HuntIR_monitor", 2],
+	["ACE_launch_NLAW_ready_F", 2],
+	["NLAW_F", 2],
 	["rhs_weap_M136", 8],
 	["rhs_weap_M320", 2],
 	["rhs_mag_smaw_HEDP", 10]

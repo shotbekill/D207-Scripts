@@ -1,8 +1,8 @@
 ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
-player setUnitTrait ["loadCoef",-2];
+player setUnitTrait ["loadCoef", -2];
 player enableStamina false;
-_PlayerConfig = [] execVM "207Scripts\PlayerConfiguration.sqf";
-waitUntil {
-	scriptDone _PlayerConfig
-};
+
+private _playerConfig = [] execVM "207Scripts\PlayerConfiguration.sqf";
+waitUntil {scriptDone _playerConfig};
+
 player setVariable ["D207_PlayerConfigInit", "16-03-26", false];

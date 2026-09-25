@@ -1,20 +1,31 @@
-params ["_box"];
-if !(isNil "_box") then {SpawnBoxLOC = _box;};
+params [["_box", objNull, [objNull]]];
+if (!isNull _box) then {missionNamespace setVariable ["SpawnBoxLOC", _box];};
+
+private _spawnBox = missionNamespace getVariable ["SpawnBoxLOC", objNull];
+if (isNull _spawnBox) exitWith {hint "Vehicle spawner reference is missing.";};
+
 createDialog "VehicleSpawnerStart";
-_ctrlPLT = (findDisplay 8000) displayCtrl 1601;
-_ctrlFOX = (findDisplay 8000) displayCtrl 1602;
-_ctrlHAW = (findDisplay 8000) displayCtrl 1603;
-_ctrlDrone = (findDisplay 8000) displayCtrl 1604;
-_control1 = (findDisplay 8000) displayCtrl 1605;
-_control2 = (findDisplay 8000) displayCtrl 1606;
+private _display = findDisplay 8000;
+private _ctrlPLT = _display displayCtrl 1601;
+private _ctrlFOX = _display displayCtrl 1602;
+private _ctrlHAW = _display displayCtrl 1603;
+private _ctrlDrone = _display displayCtrl 1604;
+private _control1 = _display displayCtrl 1605;
+private _control2 = _display displayCtrl 1606;
 ctrlSetFocus _control1;
-if (D207_VehiclePlatoon) then {_ctrlPLT ctrlSetBackgroundColor [0.7, 0, 0, 0.5];} else {_ctrlPLT ctrlSetBackgroundColor [0, 0.7, 0, 0.5];};
-if (D207_VehicleFoxtrot) then {_ctrlFOX ctrlSetBackgroundColor [0.7, 0, 0, 0.5];} else {_ctrlFOX ctrlSetBackgroundColor [0, 0.7, 0, 0.5];};
-if (D207_VehicleHawkeye) then {_ctrlHAW ctrlSetBackgroundColor [0.7, 0, 0, 0.5];} else {_ctrlHAW ctrlSetBackgroundColor [0, 0.7, 0, 0.5];};
-if (D207_VehicleDrone) then {_ctrlDrone ctrlSetBackgroundColor [0.7, 0, 0, 0.5];} else {_ctrlDrone ctrlSetBackgroundColor [0, 0.7, 0, 0.5];};
-_control1 ctrlSetBackgroundColor [0, 0, 0, 1];
-_control2 ctrlSetBackgroundColor [0, 0, 0, 1];
-_control1 ctrlSetForegroundColor [0, 0, 0, 1];
-_control2 ctrlSetForegroundColor [0, 0, 0, 1];
-_control1 ctrlSetActiveColor [0, 0, 0, 1];
-_control2 ctrlSetActiveColor [0, 0, 0, 1];
+
+private _pltLocked = missionNamespace getVariable ["D207_VehiclePlatoon", false];
+private _foxLocked = missionNamespace getVariable ["D207_VehicleFoxtrot", false];
+private _hawLocked = missionNamespace getVariable ["D207_VehicleHawkeye", false];
+private _droneLocked = missionNamespace getVariable ["D207_VehicleDrone", false];
+
+_ctrlPLT ctrlSetBackgroundColor (if (_pltLocked) then {[0.7,0,0,0.5]} else {[0,0.7,0,0.5]});
+_ctrlFOX ctrlSetBackgroundColor (if (_foxLocked) then {[0.7,0,0,0.5]} else {[0,0.7,0,0.5]});
+_ctrlHAW ctrlSetBackgroundColor (if (_hawLocked) then {[0.7,0,0,0.5]} else {[0,0.7,0,0.5]});
+_ctrlDrone ctrlSetBackgroundColor (if (_droneLocked) then {[0.7,0,0,0.5]} else {[0,0.7,0,0.5]});
+
+{
+    _x ctrlSetBackgroundColor [0,0,0,1];
+    _x ctrlSetForegroundColor [0,0,0,1];
+    _x ctrlSetActiveColor [0,0,0,1];
+} forEach [_control1, _control2];

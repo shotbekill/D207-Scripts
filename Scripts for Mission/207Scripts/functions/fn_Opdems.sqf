@@ -31,13 +31,13 @@ _Reaper = ["Reaper", "<t color='#0963c2'>Reaper Box</t>","",
 [_BaseboxBig, 0, ["D207OP"], _Reaper]  call ace_interact_menu_fnc_addActionToObject;
 
 _PlatHQ = ["PlatHQ", "<t color='#0963c2'>PlatHQ</t>","",
-{_Supplynumber = missionNamespace getVariable (_this select 2 select 0); missionNamespace setVariable [(_this select 2 select 0), _Supplynumber - 2, true]; player spawn D207_fnc_PlatHQfull;},
+{_Supplynumber = missionNamespace getVariable (_this select 2 select 0); missionNamespace setVariable [(_this select 2 select 0), _Supplynumber - 2, true]; player spawn D207_fnc_OpPHQ;},
 {missionNamespace getVariable (_this select 2 select 0) > 1}, {}, [_BoxSupplyname]] call ace_interact_menu_fnc_createAction;
 [_BaseboxBig, 0, ["D207OP"], _PlatHQ]  call ace_interact_menu_fnc_addActionToObject;
 
 _Ghost = ["Ghost", "<t color='#300ba4'>Ghost</t>","",
 {_Supplynumber = missionNamespace getVariable (_this select 2 select 0); missionNamespace setVariable [(_this select 2 select 0), _Supplynumber - 1, true]; player spawn D207_fnc_Ghost;},
-{missionNamespace getVariable (_this select 2 select 0) > 1}, {}, [_BoxSupplyname]] call ace_interact_menu_fnc_createAction;
+{missionNamespace getVariable (_this select 2 select 0) > 0}, {}, [_BoxSupplyname]] call ace_interact_menu_fnc_createAction;
 [_BaseboxBig, 0, ["D207OP"], _Ghost]  call ace_interact_menu_fnc_addActionToObject;
 
 _Grenades = ["Grenades", "<t color='#300ba4'>Grenades Resupply</t>","",

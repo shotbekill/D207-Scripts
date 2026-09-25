@@ -27,6 +27,7 @@ class D207
 		class EndEx {};
 		class EndExPos {};
 		class EndOp {};
+		class exportBoxContents {};
 		class FOBspawn {};
 		class FuelL {};
 		class FuelS {};
@@ -78,6 +79,16 @@ class D207
 		class RespawnPing {};
 		class SetUAVOwner {};
 		class UAVHint {};
+		class ClientHint {};
+		class EjectVehiclePlayer {};
+		class InitLogisticalBox {};
+		class InitMoverLogisticalBox {};
+		class InitVehicleSpawnerBox {};
+		class PlayOutro {};
+		class SpawnVehicleServer {};
+		class UpdateVehicleSpawnerServer {};
+		class VehicleSpawnResult {};
+		class ZeusSupportServer {};
 		class teleport {};
 	};
 };

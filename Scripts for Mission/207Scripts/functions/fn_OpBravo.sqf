@@ -23,7 +23,7 @@ _Box2itemlist = [
 ];
 _Box3itemlist = [
 	["GX_1RND_DRONE40_RECON_M203", 5],
-	["KAR_100Rnd_Fury_RT", 20],
+	["ADFRC_250Rnd_556_Minimi_TR", 10],
 	["ACE_IR_Strobe_Item", 10],
 	["DemoCharge_Remote_Mag", 10],
 	["SatchelCharge_Remote_Mag", 5],
@@ -33,7 +33,8 @@ _Box3itemlist = [
 	["rhsusf_mag_40Rnd_46x30_AP", 5],
 	["rhs_weap_M136", 5],
 	["rhs_weap_m72a7", 5],
-	["rhsusf_mag_40Rnd_46x30_FMJ", 5]
+	["rhsusf_mag_40Rnd_46x30_FMJ", 5],
+	["ACE_Tripod", 1]
 ];
 _BoxOBJs = [];
 _boxtypeA = 0;

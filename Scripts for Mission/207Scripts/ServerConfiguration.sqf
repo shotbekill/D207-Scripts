@@ -61,9 +61,9 @@ missionNamespace setVariable ["D207_FoxtrotTickets", 500, true];
 missionNamespace setVariable ["D207_HawkeyeTickets", 500, true];
 missionNamespace setVariable ["D207_DroneTickets", 500, true];
 
-_AddedServerConfigs = [] execVM "AddToArsenal.sqf";
+private _addedServerConfigs = [] execVM "AddToArsenal.sqf";
 waitUntil {
-	scriptDone _AddedServerConfigs
+	scriptDone _addedServerConfigs
 };
 
 publicVariable "D207_guns";

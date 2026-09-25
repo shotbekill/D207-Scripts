@@ -1,21 +1,16 @@
 params ["_BaseboxBig"]; //36 - 233 
 _Box1itemlist = [
-	["muzzle_snds_B", 10],
-	["KAR_XM250_BLK", 2],
-	["ADFRC_maximi_Modern", 2],
-	["LMG_03_F", 2],
-	["KAR_XM7_BLK", 2],
-	["ADFRC_HK417_Black", 2],
-	["SMA_ACRREMblk", 2],
-	["SMA_supp2smaB_556", 2],
+	["bipod_01_F_blk", 2],
+	["SMA_ELCAN_SPECTER_RDS_4z", 10],
+	["ACE_muzzle_mzls_H", 6],
+	["rhsusf_acc_m14_flashsuppresor", 2],
+	["ACE_Tripod", 5],
+	["rhs_weap_m14ebrri", 2],
 	["rhs_weap_M320", 2],
-	["SMA_ELCAN_SPECTER_RDS_4z", 2],
-	["SMA_ELCAN_SPECTER_ARDRDS_4z", 2],
-	["SMA_eotechG33_3XDOWN", 2],
-	["sma_spitfire_03_rds_low_black", 2],
-	["ACE_optic_Hamr_2D", 2],
-	["optic_AMS", 2],
-	["ACE_Tripod", 5]
+	["arifle_MXM_Black_F", 1],
+	["arifle_MX_SW_Black_F", 2],
+	["KAR_XM7_BLK", 2],
+	["KAR_XM250_BLK", 2]
 ];
 _Box2itemlist = [
 	["ACE_ATragMX", 2],
@@ -30,22 +25,19 @@ _Box2itemlist = [
 	["GX_1RND_DRONE40_RECON_M203", 5]
 ];
 _Box3itemlist = [
-	["launch_O_Titan_short_F", 1],
-	["launch_MRAWS_green_F", 2],
-	["KAR_100Rnd_Fury_RT_blk", 5],
-	["ADFRC_150Rnd_762_Belt_TR5", 15],
-	["KAR_20Rnd_Fury_RT_blk", 15],
-	["KAR_20Rnd_Fury", 15],
-	["SMA_30Rnd_68x43_SPC_FMJ", 20],
-	["MAA_MAAWS_GMM_HEAT", 5],
-	["MRAWS_HEAT55_F", 5],
-	["MRAWS_HEAT_F", 15],
+	["KAR_100Rnd_Fury_RT_blk", 20],
+	["KAR_20Rnd_Fury_RT_blk", 30],
+	["100Rnd_65x39_caseless_black_mag_tracer", 20],
+	["ACE_30Rnd_65_Creedmor_black_mag", 10],
+	["ACE_20Rnd_762x51_M118LR_Mag", 15],
+	["150Rnd_mas_aus_762x51_Mag", 20],
 	["MAA_MAAWS_ASM509", 5],
-	["MAA_MAAWS_GMM_MT", 5],
-	["rhsusf_100Rnd_762x51_m61_ap", 10],
-	["rhsusf_100Rnd_556x45_M995_soft_pouch", 10],
-	["Titan_AT", 10],
-	["Titan_AP", 10]
+	["MAA_MAAWS_GMM_HEAT", 10],
+	["MRAWS_HEAT_F", 10],
+	["Titan_AP", 5],
+	["Titan_AT", 5],
+	["launch_MRAWS_green_F", 2],
+	["launch_I_Titan_short_F", 2]
 ];
 _BoxOBJs = [];
 _boxtypeA = 0;

@@ -1,21 +1,27 @@
-_Platoon = "cannot";
-_Foxtrot = "cannot";
-_Hawkeye = "cannot";
-_Drone = "cannot";
-if !(D207_VehiclePlatoon) then {_Platoon = "can";};
-if !(D207_VehicleFoxtrot) then {_Foxtrot = "can";};
-if !(D207_VehicleHawkeye) then {_Hawkeye = "can";};
-if !(D207_VehicleDrone) then {_Drone = "can";};
-_hinttext1 = parseText format ["You %1 spawn Platoon Vehicle's.", _Platoon];
-_hinttext2 = parseText format ["You %1 spawn Foxtrot Vehicle's.", _Foxtrot];
-_hinttext3 = parseText format ["You %1 spawn Hawkeye Vehicle's.", _Hawkeye];
-_hinttext4 = parseText format ["You %1 spawn Hawkeye Vehicle's.", _Drone];
-hint composeText [_hinttext1, lineBreak, _hinttext2, lineBreak, _hinttext3, lineBreak, _hinttext4];
-_ctrlPLT = (findDisplay 8000) displayCtrl 1601;
-_ctrlFOX = (findDisplay 8000) displayCtrl 1602;
-_ctrlHAW = (findDisplay 8000) displayCtrl 1603;
-_ctrlDrone = (findDisplay 8000) displayCtrl 1603;
-if (D207_VehiclePlatoon) then {_ctrlPLT ctrlSetBackgroundColor [0.7, 0, 0, 0.5];} else {_ctrlPLT ctrlSetBackgroundColor [0, 0.7, 0, 0.5];};
-if (D207_VehicleFoxtrot) then {_ctrlFOX ctrlSetBackgroundColor [0.7, 0, 0, 0.5];} else {_ctrlFOX ctrlSetBackgroundColor [0, 0.7, 0, 0.5];};
-if (D207_VehicleHawkeye) then {_ctrlHAW ctrlSetBackgroundColor [0.7, 0, 0, 0.5];} else {_ctrlHAW ctrlSetBackgroundColor [0, 0.7, 0, 0.5];};
-if (D207_VehicleDrone) then {_ctrlDrone ctrlSetBackgroundColor [0.7, 0, 0, 0.5];} else {_ctrlDrone ctrlSetBackgroundColor [0, 0.7, 0, 0.5];};
+private _platoonLocked = missionNamespace getVariable ["D207_VehiclePlatoon", false];
+private _foxtrotLocked = missionNamespace getVariable ["D207_VehicleFoxtrot", false];
+private _hawkeyeLocked = missionNamespace getVariable ["D207_VehicleHawkeye", false];
+private _droneLocked = missionNamespace getVariable ["D207_VehicleDrone", false];
+
+private _platoon = if (_platoonLocked) then {"cannot"} else {"can"};
+private _foxtrot = if (_foxtrotLocked) then {"cannot"} else {"can"};
+private _hawkeye = if (_hawkeyeLocked) then {"cannot"} else {"can"};
+private _drone = if (_droneLocked) then {"cannot"} else {"can"};
+
+private _hintText1 = parseText format ["You %1 spawn Platoon vehicles.", _platoon];
+private _hintText2 = parseText format ["You %1 spawn Foxtrot vehicles.", _foxtrot];
+private _hintText3 = parseText format ["You %1 spawn Hawkeye vehicles.", _hawkeye];
+private _hintText4 = parseText format ["You %1 spawn Drone vehicles.", _drone];
+hint composeText [_hintText1, lineBreak, _hintText2, lineBreak, _hintText3, lineBreak, _hintText4];
+
+private _display = findDisplay 8000;
+if (isNull _display) exitWith {};
+private _ctrlPLT = _display displayCtrl 1601;
+private _ctrlFOX = _display displayCtrl 1602;
+private _ctrlHAW = _display displayCtrl 1603;
+private _ctrlDrone = _display displayCtrl 1604;
+
+_ctrlPLT ctrlSetBackgroundColor (if (_platoonLocked) then {[0.7,0,0,0.5]} else {[0,0.7,0,0.5]});
+_ctrlFOX ctrlSetBackgroundColor (if (_foxtrotLocked) then {[0.7,0,0,0.5]} else {[0,0.7,0,0.5]});
+_ctrlHAW ctrlSetBackgroundColor (if (_hawkeyeLocked) then {[0.7,0,0,0.5]} else {[0,0.7,0,0.5]});
+_ctrlDrone ctrlSetBackgroundColor (if (_droneLocked) then {[0.7,0,0,0.5]} else {[0,0.7,0,0.5]});

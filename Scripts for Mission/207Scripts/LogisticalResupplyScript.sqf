@@ -1,8 +1,10 @@
 private ["_box","_resup","_resup1","_resup2","_resup3","_resup4","_resup5","_resup6","_resup7","_Basefull","_Reaper","_Grenades","_Medic","_Doctor","_PlatHQ","_Boxloader","_Track","_Wheel","_palletjack","_Ammo","_Fuel","_AMR","_Snip","_M32","_AR2","_APMines","_ATMines","_NVG","_CBRN1","_CBRN2","_radio","_HALO","_SCUBA","_SAD","_Mort","_MortAmmo","_M2","_MAmmo","_TOW","_TowAmmo","_ber","_Arsenal"];
 params ["_box"];
-waitUntil {!isNil "Startup"};
+if (!hasInterface || {isNull _box}) exitWith {};
+waitUntil {missionNamespace getVariable ["Startup", false]};
+if (_box getVariable ["D207_LogisticalActionsAdded", false]) exitWith {};
+_box setVariable ["D207_LogisticalActionsAdded", true, false];
 if (hasInterface) then {
-waitUntil {missionNamespace getVariable "Startup"};
 _box spawn D207_fnc_Arsenalitems;
 
 _D207 = ["D207", "<t color='#207207'>D207 Logistical</t>","",{nil}, {true}, {}, [], [0, 0, -1], 7] call ace_interact_menu_fnc_createAction;
@@ -155,12 +157,12 @@ _TOW = ["TOW", "TOW","",{player spawn D207_fnc_TOW;}, {true}] call ace_interact_
 _TowAmmo = ["TowAmmo", "TOW Ammo","",{player spawn D207_fnc_towammo;}, {true}] call ace_interact_menu_fnc_createAction;
 [_box, 0, ["D207", "Core2", "Core23"], _TowAmmo]  call ace_interact_menu_fnc_addActionToObject;
 
-_StaticsBox = ["StaticsBox", "Statics Box","",{_mainbox = "BL_Crate_D207_Statics" createVehicle position player;[_mainbox] remoteExec ["D207_fnc_StaticsBox", 0];}, {true}] call ace_interact_menu_fnc_createAction;
+_StaticsBox = ["StaticsBox", "Statics Box","",{private _mainbox = "BL_Crate_D207_Statics" createVehicle position player; [_mainbox] remoteExec ["D207_fnc_StaticsBox", -2, _mainbox];}, {true}] call ace_interact_menu_fnc_createAction;
 [_box, 0, ["D207", "Core2", "Core23"], _StaticsBox]  call ace_interact_menu_fnc_addActionToObject;
 
 _VehicleSpawner = ["VehicleSpawner", "<t color='#DCED40'>Vehicle Spawner</t>","",{[_target] execVM "207Scripts\Vehiclespawner\StartDialog.sqf"}, {true}] call ace_interact_menu_fnc_createAction;
 [_box, 0, ["D207", "Core2"], _VehicleSpawner]  call ace_interact_menu_fnc_addActionToObject;
 
-_PackBox = ["PackBox", "<t color='#013DB7'>Pack Logistical Box</t>","",{[_target] spawn D207_fnc_MoveLogisticalBox;}, {true}] call ace_interact_menu_fnc_createAction;
+_PackBox = ["PackBox", "<t color='#013DB7'>Pack Logistical Box</t>","",{[_target, _player] remoteExecCall ["D207_fnc_MoveLogisticalBox", 2];}, {true}] call ace_interact_menu_fnc_createAction;
 [_box, 0, ["D207"], _PackBox]  call ace_interact_menu_fnc_addActionToObject;
 };
